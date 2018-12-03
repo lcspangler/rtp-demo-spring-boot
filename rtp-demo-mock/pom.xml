@@ -7,7 +7,7 @@
   <artifactId>rtp-demo-mock</artifactId>
   <version>1.0.0.0</version>
 
-  <name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel</name>
+  <name>Mock RTP Service</name>
   <description>Mock RTP Service</description>
 
   <properties>
@@ -15,6 +15,9 @@
 
     <!-- configure the Fuse version you want to use here -->
     <fuse.version>7.1.0.fuse-710019-redhat-00002</fuse.version>
+    <camel.version>2.23.0</camel.version>
+    <!--  <spring.boot.version>2.1.1.RELEASE</spring.boot.version>
+    <junit.version>4.12</junit.version>-->
 
     <!-- maven plugin versions -->
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
@@ -29,11 +32,32 @@
         <version>${fuse.version}</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
+      </dependency> 
+      
     </dependencies> 
   </dependencyManagement>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>rtp-creditor-domain-model</artifactId>
+      <version>1.0.0.0</version>    
+    </dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-kafka</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-stream</artifactId>
+		</dependency>
+    
 
     <!-- Enabling health checks -->
     <dependency>
