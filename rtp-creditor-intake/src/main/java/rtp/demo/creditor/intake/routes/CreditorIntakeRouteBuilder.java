@@ -30,15 +30,13 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 		} else {
 			kafka.setBrokers(kafkaBootstrap);
 		}
-
 		this.getContext().addComponent("kafka", kafka);
-
-		LOG.info("COMPONENTS: " + this.getContext().getComponentNames());
+		LOG.debug("Camel Components: " + this.getContext().getComponentNames());
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
 				+ "&valueDeserializer=rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessageDeserializer")
-						.routeId("FromKafka").log("${body}");
+						.routeId("FromKafka").log("${body}");// .bean(beanType, method);
 	}
 
 	public String getKafkaBootstrap() {

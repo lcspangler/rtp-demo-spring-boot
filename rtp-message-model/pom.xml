@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.example</groupId>
+  <groupId>rtp.demo</groupId>
   <artifactId>rtp-message-model</artifactId>
   <packaging>jar</packaging>
   <version>1.0.0.0</version>
@@ -54,7 +54,7 @@
      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
      <id>openshift</id>
      <build>
-        <finalName>rtp-messaging-model</finalName>
+        <finalName>rtp-message-model</finalName>
         <plugins>
           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
