@@ -87,7 +87,7 @@ public class CreditTransferMessage {
 	// Debtor account identifier assigned by an institution.
 	// Format: Up to 17 characters account identification (alphanumeric)
 	// Example: 11000179512199001
-	// XML Location: CdtTrfTxInf.CdtrAcct.Id.Othr.Id
+	// XML Location: CdtTrfTxInf.DbtrAcct.Id.Othr.Id
 	private String debtorAccountNumber;
 
 	// Identification of the Creditor FI.

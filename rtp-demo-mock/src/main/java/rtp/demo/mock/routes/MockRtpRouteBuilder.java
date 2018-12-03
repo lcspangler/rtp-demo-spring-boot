@@ -1,17 +1,26 @@
 package rtp.demo.mock.routes;
 
+import java.math.BigDecimal;
+
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import iso.std.iso._20022.tech.xsd.pacs_008_001.AccountIdentification4Choice;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.ActiveCurrencyAndAmount;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.BranchAndFinancialInstitutionIdentification5;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.CashAccount24;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.ClearingSystemMemberIdentification2;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.CreditTransferTransaction25;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.FIToFICustomerCreditTransferV06;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.FinancialInstitutionIdentification8;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.GenericAccountIdentification1;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.GroupHeader70;
-import iso.std.iso._20022.tech.xsd.pacs_008_001.PaymentTypeInformation21;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.PaymentIdentification3;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.SettlementInstruction4;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.SettlementMethod1Code;
 
 @Component
 public class MockRtpRouteBuilder extends RouteBuilder {
@@ -81,10 +90,35 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 				.setClrSysMmbId(new ClearingSystemMemberIdentification2());
 		dummyRtpCreditTransferMessage.getGrpHdr().getInstdAgt().getFinInstnId().getClrSysMmbId().setMmbId("020010001");
 
-		// .setInstdAgt(new BranchAndFinancialInstitutionIdentification5());
+		// Set Payment Amount and Currency
+		ActiveCurrencyAndAmount activeCurrencyAndAmount = new ActiveCurrencyAndAmount();
+		activeCurrencyAndAmount.setValue(new BigDecimal("525.25"));
+		activeCurrencyAndAmount.setCcy("USD");
+		dummyRtpCreditTransferMessage.getGrpHdr().setTtlIntrBkSttlmAmt(activeCurrencyAndAmount);
 
-		dummyRtpCreditTransferMessage.getGrpHdr().setPmtTpInf(new PaymentTypeInformation21());
-		// dummyRtpCreditTransferMessage.getGrpHdr().getPmtTpInf().s
+		// Set Settlement Method
+		dummyRtpCreditTransferMessage.getGrpHdr().setSttlmInf(new SettlementInstruction4());
+		dummyRtpCreditTransferMessage.getGrpHdr().getSttlmInf().setSttlmMtd(SettlementMethod1Code.CLRG);
+
+		// Set End-to-End Id and Payment Instruction Id
+		CreditTransferTransaction25 creditTransferTransaction25 = new CreditTransferTransaction25();
+		creditTransferTransaction25.setPmtId(new PaymentIdentification3());
+		creditTransferTransaction25.getPmtId().setEndToEndId("E2E-Ref001");
+		creditTransferTransaction25.getPmtId().setInstrId("2015111511021200201BFFFF00000000001");
+
+		// Set Creditor Account Number
+		creditTransferTransaction25.setCdtrAcct(new CashAccount24());
+		creditTransferTransaction25.getCdtrAcct().setId(new AccountIdentification4Choice());
+		creditTransferTransaction25.getCdtrAcct().getId().setOthr(new GenericAccountIdentification1());
+		creditTransferTransaction25.getCdtrAcct().getId().getOthr().setId("12000194212199001");
+
+		// Set Debtor Account Number
+		creditTransferTransaction25.setDbtrAcct(new CashAccount24());
+		creditTransferTransaction25.getDbtrAcct().setId(new AccountIdentification4Choice());
+		creditTransferTransaction25.getDbtrAcct().getId().setOthr(new GenericAccountIdentification1());
+		creditTransferTransaction25.getDbtrAcct().getId().getOthr().setId("12000194212199001");
+
+		dummyRtpCreditTransferMessage.getCdtTrfTxInf().add(creditTransferTransaction25);
 
 		return dummyRtpCreditTransferMessage;
 	}
