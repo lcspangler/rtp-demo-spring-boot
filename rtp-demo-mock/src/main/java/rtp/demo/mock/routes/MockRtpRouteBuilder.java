@@ -36,7 +36,7 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 		LOG.info("COMPONENTS: " + this.getContext().getComponentNames());
 
-		from("timer://foo?period=5000").setBody().constant("Hello World! " + kafkaBootstrap)
+		from("timer://foo?period=5000").setBody().constant("Hello World!!! " + kafkaBootstrap)
 				.log(">>> ${body}" + "/////" + kafkaBootstrap + "  " + kafkaProducerTopic + "COMPONENTS: "
 						+ this.getContext().getComponentNames() + "kafka component: "
 						+ this.getContext().getComponent("kafka"))
