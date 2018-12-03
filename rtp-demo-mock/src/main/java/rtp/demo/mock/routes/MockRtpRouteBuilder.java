@@ -1,28 +1,26 @@
 package rtp.demo.mock.routes;
 
+import java.math.BigDecimal;
+
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessage;
+
 @Component
 public class MockRtpRouteBuilder extends RouteBuilder {
 
 	private static final Logger LOG = LoggerFactory.getLogger(MockRtpRouteBuilder.class);
 
-	// @Value("${BOOTSTRAP_SERVERS}")
 	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
-
-	// @Value("${PRODUCER_TOPIC}")
 	private String kafkaProducerTopic = System.getenv("PRODUCER_TOPIC");
 
 	@Override
 	public void configure() throws Exception {
 		LOG.info("Configuring Mock RTP Routes");
-		// PropertiesComponent pc = getContext().getComponent("properties",
-		// PropertiesComponent.class);
-		// pc.setLocation("classpath:application.properties");
 
 		KafkaComponent kafka = new KafkaComponent();
 		if (kafkaBootstrap == null) {
@@ -31,16 +29,22 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 		} else {
 			kafka.setBrokers(kafkaBootstrap);
 		}
-
 		this.getContext().addComponent("kafka", kafka);
 
 		LOG.info("COMPONENTS: " + this.getContext().getComponentNames());
 
-		from("timer://foo?period=5000").setBody().constant("Hello World!!! " + kafkaBootstrap)
-				.log(">>> ${body}" + "/////" + kafkaBootstrap + "  " + kafkaProducerTopic + "COMPONENTS: "
-						+ this.getContext().getComponentNames() + "kafka component: "
-						+ this.getContext().getComponent("kafka"))
-				.to("kafka:my-topic-1");
+		CreditTransferMessage creditTransferMessage = new CreditTransferMessage();
+		creditTransferMessage.setCreditTransferMessageId("M2018111511021200201BFFF00000000001");
+		// creditTransferMessage.setCreationDateTime(LocalDateTime.parse("2018-11-12T10:05:00"));
+		creditTransferMessage.setNumberOfTransactions(Integer.valueOf("1"));
+		creditTransferMessage.setPaymentAmount(new BigDecimal("512.23"));
+		creditTransferMessage.setPaymentCurrency("USD");
+		creditTransferMessage.setCreditorId("020010001");
+		creditTransferMessage.setCreditorAccountNumber("12000194212199001");
+		creditTransferMessage.setSettlementMethod("CLRG");
+
+		from("timer://foo?period=10000").setBody().constant(creditTransferMessage).log(">>> ${body}").to(
+				"kafka:my-topic-1?serializerClass=rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessageSerializer");
 	}
 
 	public String getKafkaBootstrap() {

@@ -11,10 +11,7 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CreditorIntakeRouteBuilder.class);
 
-	// @Value("${BOOTSTRAP_SERVERS}")
 	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
-
-	// @Value("${PRODUCER_TOPIC}")
 	private String kafkaConsumerTopic = System.getenv("CONSUMER_TOPIC");
 
 	private String consumerGroup = "my-group";
@@ -24,10 +21,7 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		LOG.info("Configuring Mock RTP Routes");
-		// PropertiesComponent pc = getContext().getComponent("properties",
-		// PropertiesComponent.class);
-		// pc.setLocation("classpath:application.properties");
+		LOG.info("Configuring Creditor Intake Routes");
 
 		KafkaComponent kafka = new KafkaComponent();
 		if (kafkaBootstrap == null) {
@@ -42,7 +36,8 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 		LOG.info("COMPONENTS: " + this.getContext().getComponentNames());
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
-				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup)
+				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
+				+ "&valueDeserializer=rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessageDeserializer")
 						.routeId("FromKafka").log("${body}");
 	}
 
