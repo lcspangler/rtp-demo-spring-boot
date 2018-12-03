@@ -1,4 +1,4 @@
-package rtp.demo.creditor.domain.rtp.simplified;
+package rtp.demo.creditor.domain.rtp.simplified.serde;
 
 import java.util.Map;
 

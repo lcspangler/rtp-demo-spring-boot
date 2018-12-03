@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import iso.std.iso._20022.tech.xsd.pacs_008_001.FIToFICustomerCreditTransferV06;
 import rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessage;
 
 @Component
@@ -44,7 +45,7 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 		creditTransferMessage.setSettlementMethod("CLRG");
 
 		from("timer://foo?period=10000").setBody().constant(creditTransferMessage).log(">>> ${body}").to(
-				"kafka:my-topic-1?serializerClass=rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessageSerializer");
+				"kafka:my-topic-1?serializerClass=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageSerializer");
 	}
 
 	public String getKafkaBootstrap() {
@@ -61,6 +62,12 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 	public void setKafkaProducerTopic(String kafkaProducerTopic) {
 		this.kafkaProducerTopic = kafkaProducerTopic;
+	}
+
+	private FIToFICustomerCreditTransferV06 makeDummyRtpCreditTransferMessage() {
+		FIToFICustomerCreditTransferV06 dummyRtpCreditTransferMessage = new FIToFICustomerCreditTransferV06();
+
+		return dummyRtpCreditTransferMessage;
 	}
 
 }

@@ -1,4 +1,4 @@
-package rtp.demo.creditor.domain.rtp.simplified;
+package rtp.message.model.serde;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import org.apache.kafka.common.serialization.Deserializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class CreditTransferMessageDeserializer implements Deserializer {
+public class FIToFICustomerCreditTransferV06Deserializer implements Deserializer {
 
 	@Override
 	public void close() {
@@ -19,14 +19,14 @@ public class CreditTransferMessageDeserializer implements Deserializer {
 	@Override
 	public Object deserialize(String arg0, byte[] arg1) {
 		ObjectMapper mapper = new ObjectMapper();
-		CreditTransferMessage user = null;
+		FIToFICustomerCreditTransferV06Deserializer message = null;
 		try {
-			user = mapper.readValue(arg1, CreditTransferMessage.class);
+			message = mapper.readValue(arg1, FIToFICustomerCreditTransferV06Deserializer.class);
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
-		return user;
+		return message;
 	}
 
 }

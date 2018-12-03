@@ -17,7 +17,6 @@
     <module>rtp-creditor-domain-model</module>
     <module>rtp-creditor-validation-model</module>
     <module>rtp-creditor-validation-rules</module>
-    <module>rtp-message-serde</module>
     <module>rtp-demo-mock</module>
     <module>rtp-creditor-intake</module>
   </modules>
