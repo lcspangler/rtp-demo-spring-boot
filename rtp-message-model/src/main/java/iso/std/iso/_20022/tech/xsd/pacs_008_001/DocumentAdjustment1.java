@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for DocumentAdjustment1 complex type.
+ * <p>
+ * Java class for DocumentAdjustment1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="DocumentAdjustment1">
@@ -38,118 +39,103 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DocumentAdjustment1", propOrder = {
-    "amt",
-    "cdtDbtInd",
-    "rsn",
-    "addtlInf"
-})
+@XmlType(name = "DocumentAdjustment1", propOrder = { "amt", "cdtDbtInd", "rsn", "addtlInf" })
 public class DocumentAdjustment1 {
 
-    @XmlElement(name = "Amt", required = true)
-    protected ActiveOrHistoricCurrencyAndAmount amt;
-    @XmlElement(name = "CdtDbtInd")
-    @XmlSchemaType(name = "string")
-    protected CreditDebitCode cdtDbtInd;
-    @XmlElement(name = "Rsn")
-    protected String rsn;
-    @XmlElement(name = "AddtlInf")
-    protected String addtlInf;
+	@XmlElement(name = "Amt", required = true)
+	protected ActiveOrHistoricCurrencyAndAmount amt;
+	@XmlElement(name = "CdtDbtInd")
+	@XmlSchemaType(name = "string")
+	protected CreditDebitCode cdtDbtInd;
+	@XmlElement(name = "Rsn")
+	protected String rsn;
+	@XmlElement(name = "AddtlInf")
+	protected String addtlInf;
 
-    /**
-     * Gets the value of the amt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getAmt() {
-        return amt;
-    }
+	/**
+	 * Gets the value of the amt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getAmt() {
+		return amt;
+	}
 
-    /**
-     * Sets the value of the amt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.amt = value;
-    }
+	/**
+	 * Sets the value of the amt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.amt = value;
+	}
 
-    /**
-     * Gets the value of the cdtDbtInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CreditDebitCode }
-     *     
-     */
-    public CreditDebitCode getCdtDbtInd() {
-        return cdtDbtInd;
-    }
+	/**
+	 * Gets the value of the cdtDbtInd property.
+	 * 
+	 * @return possible object is {@link CreditDebitCode }
+	 * 
+	 */
+	public CreditDebitCode getCdtDbtInd() {
+		return cdtDbtInd;
+	}
 
-    /**
-     * Sets the value of the cdtDbtInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CreditDebitCode }
-     *     
-     */
-    public void setCdtDbtInd(CreditDebitCode value) {
-        this.cdtDbtInd = value;
-    }
+	/**
+	 * Sets the value of the cdtDbtInd property.
+	 * 
+	 * @param value allowed object is {@link CreditDebitCode }
+	 * 
+	 */
+	public void setCdtDbtInd(CreditDebitCode value) {
+		this.cdtDbtInd = value;
+	}
 
-    /**
-     * Gets the value of the rsn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRsn() {
-        return rsn;
-    }
+	/**
+	 * Gets the value of the rsn property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getRsn() {
+		return rsn;
+	}
 
-    /**
-     * Sets the value of the rsn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRsn(String value) {
-        this.rsn = value;
-    }
+	/**
+	 * Sets the value of the rsn property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setRsn(String value) {
+		this.rsn = value;
+	}
 
-    /**
-     * Gets the value of the addtlInf property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAddtlInf() {
-        return addtlInf;
-    }
+	/**
+	 * Gets the value of the addtlInf property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAddtlInf() {
+		return addtlInf;
+	}
 
-    /**
-     * Sets the value of the addtlInf property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAddtlInf(String value) {
-        this.addtlInf = value;
-    }
+	/**
+	 * Sets the value of the addtlInf property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setAddtlInf(String value) {
+		this.addtlInf = value;
+	}
+
+	@Override
+	public String toString() {
+		return "DocumentAdjustment1 [amt=" + amt + ", cdtDbtInd=" + cdtDbtInd + ", rsn=" + rsn + ", addtlInf="
+				+ addtlInf + "]";
+	}
 
 }

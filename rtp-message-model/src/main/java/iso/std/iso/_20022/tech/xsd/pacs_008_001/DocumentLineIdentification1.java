@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for DocumentLineIdentification1 complex type.
+ * <p>
+ * Java class for DocumentLineIdentification1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="DocumentLineIdentification1">
@@ -38,91 +39,80 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DocumentLineIdentification1", propOrder = {
-    "tp",
-    "nb",
-    "rltdDt"
-})
+@XmlType(name = "DocumentLineIdentification1", propOrder = { "tp", "nb", "rltdDt" })
 public class DocumentLineIdentification1 {
 
-    @XmlElement(name = "Tp")
-    protected DocumentLineType1 tp;
-    @XmlElement(name = "Nb")
-    protected String nb;
-    @XmlElement(name = "RltdDt")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar rltdDt;
+	@XmlElement(name = "Tp")
+	protected DocumentLineType1 tp;
+	@XmlElement(name = "Nb")
+	protected String nb;
+	@XmlElement(name = "RltdDt")
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar rltdDt;
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DocumentLineType1 }
-     *     
-     */
-    public DocumentLineType1 getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link DocumentLineType1 }
+	 * 
+	 */
+	public DocumentLineType1 getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DocumentLineType1 }
-     *     
-     */
-    public void setTp(DocumentLineType1 value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link DocumentLineType1 }
+	 * 
+	 */
+	public void setTp(DocumentLineType1 value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the nb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNb() {
-        return nb;
-    }
+	/**
+	 * Gets the value of the nb property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNb() {
+		return nb;
+	}
 
-    /**
-     * Sets the value of the nb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNb(String value) {
-        this.nb = value;
-    }
+	/**
+	 * Sets the value of the nb property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setNb(String value) {
+		this.nb = value;
+	}
 
-    /**
-     * Gets the value of the rltdDt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getRltdDt() {
-        return rltdDt;
-    }
+	/**
+	 * Gets the value of the rltdDt property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getRltdDt() {
+		return rltdDt;
+	}
 
-    /**
-     * Sets the value of the rltdDt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setRltdDt(XMLGregorianCalendar value) {
-        this.rltdDt = value;
-    }
+	/**
+	 * Sets the value of the rltdDt property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setRltdDt(XMLGregorianCalendar value) {
+		this.rltdDt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "DocumentLineIdentification1 [tp=" + tp + ", nb=" + nb + ", rltdDt=" + rltdDt + "]";
+	}
 
 }

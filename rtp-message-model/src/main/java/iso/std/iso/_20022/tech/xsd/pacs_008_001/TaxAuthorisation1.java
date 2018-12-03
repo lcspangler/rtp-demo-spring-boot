@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for TaxAuthorisation1 complex type.
+ * <p>
+ * Java class for TaxAuthorisation1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="TaxAuthorisation1">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TaxAuthorisation1", propOrder = {
-    "titl",
-    "nm"
-})
+@XmlType(name = "TaxAuthorisation1", propOrder = { "titl", "nm" })
 public class TaxAuthorisation1 {
 
-    @XmlElement(name = "Titl")
-    protected String titl;
-    @XmlElement(name = "Nm")
-    protected String nm;
+	@XmlElement(name = "Titl")
+	protected String titl;
+	@XmlElement(name = "Nm")
+	protected String nm;
 
-    /**
-     * Gets the value of the titl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getTitl() {
-        return titl;
-    }
+	/**
+	 * Gets the value of the titl property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getTitl() {
+		return titl;
+	}
 
-    /**
-     * Sets the value of the titl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setTitl(String value) {
-        this.titl = value;
-    }
+	/**
+	 * Sets the value of the titl property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setTitl(String value) {
+		this.titl = value;
+	}
 
-    /**
-     * Gets the value of the nm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNm() {
-        return nm;
-    }
+	/**
+	 * Gets the value of the nm property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNm() {
+		return nm;
+	}
 
-    /**
-     * Sets the value of the nm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNm(String value) {
-        this.nm = value;
-    }
+	/**
+	 * Sets the value of the nm property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setNm(String value) {
+		this.nm = value;
+	}
+
+	@Override
+	public String toString() {
+		return "TaxAuthorisation1 [titl=" + titl + ", nm=" + nm + "]";
+	}
 
 }

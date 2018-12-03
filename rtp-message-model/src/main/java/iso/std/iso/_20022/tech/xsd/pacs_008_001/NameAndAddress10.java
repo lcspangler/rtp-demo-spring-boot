@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for NameAndAddress10 complex type.
+ * <p>
+ * Java class for NameAndAddress10 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="NameAndAddress10">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NameAndAddress10", propOrder = {
-    "nm",
-    "adr"
-})
+@XmlType(name = "NameAndAddress10", propOrder = { "nm", "adr" })
 public class NameAndAddress10 {
 
-    @XmlElement(name = "Nm", required = true)
-    protected String nm;
-    @XmlElement(name = "Adr", required = true)
-    protected PostalAddress6 adr;
+	@XmlElement(name = "Nm", required = true)
+	protected String nm;
+	@XmlElement(name = "Adr", required = true)
+	protected PostalAddress6 adr;
 
-    /**
-     * Gets the value of the nm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNm() {
-        return nm;
-    }
+	/**
+	 * Gets the value of the nm property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNm() {
+		return nm;
+	}
 
-    /**
-     * Sets the value of the nm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNm(String value) {
-        this.nm = value;
-    }
+	/**
+	 * Sets the value of the nm property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setNm(String value) {
+		this.nm = value;
+	}
 
-    /**
-     * Gets the value of the adr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PostalAddress6 }
-     *     
-     */
-    public PostalAddress6 getAdr() {
-        return adr;
-    }
+	/**
+	 * Gets the value of the adr property.
+	 * 
+	 * @return possible object is {@link PostalAddress6 }
+	 * 
+	 */
+	public PostalAddress6 getAdr() {
+		return adr;
+	}
 
-    /**
-     * Sets the value of the adr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PostalAddress6 }
-     *     
-     */
-    public void setAdr(PostalAddress6 value) {
-        this.adr = value;
-    }
+	/**
+	 * Sets the value of the adr property.
+	 * 
+	 * @param value allowed object is {@link PostalAddress6 }
+	 * 
+	 */
+	public void setAdr(PostalAddress6 value) {
+		this.adr = value;
+	}
+
+	@Override
+	public String toString() {
+		return "NameAndAddress10 [nm=" + nm + ", adr=" + adr + "]";
+	}
 
 }

@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Party11Choice complex type.
+ * <p>
+ * Java class for Party11Choice complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Party11Choice">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Party11Choice", propOrder = {
-    "orgId",
-    "prvtId"
-})
+@XmlType(name = "Party11Choice", propOrder = { "orgId", "prvtId" })
 public class Party11Choice {
 
-    @XmlElement(name = "OrgId")
-    protected OrganisationIdentification8 orgId;
-    @XmlElement(name = "PrvtId")
-    protected PersonIdentification5 prvtId;
+	@XmlElement(name = "OrgId")
+	protected OrganisationIdentification8 orgId;
+	@XmlElement(name = "PrvtId")
+	protected PersonIdentification5 prvtId;
 
-    /**
-     * Gets the value of the orgId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OrganisationIdentification8 }
-     *     
-     */
-    public OrganisationIdentification8 getOrgId() {
-        return orgId;
-    }
+	/**
+	 * Gets the value of the orgId property.
+	 * 
+	 * @return possible object is {@link OrganisationIdentification8 }
+	 * 
+	 */
+	public OrganisationIdentification8 getOrgId() {
+		return orgId;
+	}
 
-    /**
-     * Sets the value of the orgId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OrganisationIdentification8 }
-     *     
-     */
-    public void setOrgId(OrganisationIdentification8 value) {
-        this.orgId = value;
-    }
+	/**
+	 * Sets the value of the orgId property.
+	 * 
+	 * @param value allowed object is {@link OrganisationIdentification8 }
+	 * 
+	 */
+	public void setOrgId(OrganisationIdentification8 value) {
+		this.orgId = value;
+	}
 
-    /**
-     * Gets the value of the prvtId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PersonIdentification5 }
-     *     
-     */
-    public PersonIdentification5 getPrvtId() {
-        return prvtId;
-    }
+	/**
+	 * Gets the value of the prvtId property.
+	 * 
+	 * @return possible object is {@link PersonIdentification5 }
+	 * 
+	 */
+	public PersonIdentification5 getPrvtId() {
+		return prvtId;
+	}
 
-    /**
-     * Sets the value of the prvtId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PersonIdentification5 }
-     *     
-     */
-    public void setPrvtId(PersonIdentification5 value) {
-        this.prvtId = value;
-    }
+	/**
+	 * Sets the value of the prvtId property.
+	 * 
+	 * @param value allowed object is {@link PersonIdentification5 }
+	 * 
+	 */
+	public void setPrvtId(PersonIdentification5 value) {
+		this.prvtId = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Party11Choice [orgId=" + orgId + ", prvtId=" + prvtId + "]";
+	}
 
 }

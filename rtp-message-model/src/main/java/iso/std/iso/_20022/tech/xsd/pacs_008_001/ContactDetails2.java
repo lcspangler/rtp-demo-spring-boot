@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ContactDetails2 complex type.
+ * <p>
+ * Java class for ContactDetails2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ContactDetails2">
@@ -41,199 +42,169 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContactDetails2", propOrder = {
-    "nmPrfx",
-    "nm",
-    "phneNb",
-    "mobNb",
-    "faxNb",
-    "emailAdr",
-    "othr"
-})
+@XmlType(name = "ContactDetails2", propOrder = { "nmPrfx", "nm", "phneNb", "mobNb", "faxNb", "emailAdr", "othr" })
 public class ContactDetails2 {
 
-    @XmlElement(name = "NmPrfx")
-    @XmlSchemaType(name = "string")
-    protected NamePrefix1Code nmPrfx;
-    @XmlElement(name = "Nm")
-    protected String nm;
-    @XmlElement(name = "PhneNb")
-    protected String phneNb;
-    @XmlElement(name = "MobNb")
-    protected String mobNb;
-    @XmlElement(name = "FaxNb")
-    protected String faxNb;
-    @XmlElement(name = "EmailAdr")
-    protected String emailAdr;
-    @XmlElement(name = "Othr")
-    protected String othr;
+	@XmlElement(name = "NmPrfx")
+	@XmlSchemaType(name = "string")
+	protected NamePrefix1Code nmPrfx;
+	@XmlElement(name = "Nm")
+	protected String nm;
+	@XmlElement(name = "PhneNb")
+	protected String phneNb;
+	@XmlElement(name = "MobNb")
+	protected String mobNb;
+	@XmlElement(name = "FaxNb")
+	protected String faxNb;
+	@XmlElement(name = "EmailAdr")
+	protected String emailAdr;
+	@XmlElement(name = "Othr")
+	protected String othr;
 
-    /**
-     * Gets the value of the nmPrfx property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NamePrefix1Code }
-     *     
-     */
-    public NamePrefix1Code getNmPrfx() {
-        return nmPrfx;
-    }
+	/**
+	 * Gets the value of the nmPrfx property.
+	 * 
+	 * @return possible object is {@link NamePrefix1Code }
+	 * 
+	 */
+	public NamePrefix1Code getNmPrfx() {
+		return nmPrfx;
+	}
 
-    /**
-     * Sets the value of the nmPrfx property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NamePrefix1Code }
-     *     
-     */
-    public void setNmPrfx(NamePrefix1Code value) {
-        this.nmPrfx = value;
-    }
+	/**
+	 * Sets the value of the nmPrfx property.
+	 * 
+	 * @param value allowed object is {@link NamePrefix1Code }
+	 * 
+	 */
+	public void setNmPrfx(NamePrefix1Code value) {
+		this.nmPrfx = value;
+	}
 
-    /**
-     * Gets the value of the nm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNm() {
-        return nm;
-    }
+	/**
+	 * Gets the value of the nm property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNm() {
+		return nm;
+	}
 
-    /**
-     * Sets the value of the nm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNm(String value) {
-        this.nm = value;
-    }
+	/**
+	 * Sets the value of the nm property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setNm(String value) {
+		this.nm = value;
+	}
 
-    /**
-     * Gets the value of the phneNb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPhneNb() {
-        return phneNb;
-    }
+	/**
+	 * Gets the value of the phneNb property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPhneNb() {
+		return phneNb;
+	}
 
-    /**
-     * Sets the value of the phneNb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPhneNb(String value) {
-        this.phneNb = value;
-    }
+	/**
+	 * Sets the value of the phneNb property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setPhneNb(String value) {
+		this.phneNb = value;
+	}
 
-    /**
-     * Gets the value of the mobNb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMobNb() {
-        return mobNb;
-    }
+	/**
+	 * Gets the value of the mobNb property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getMobNb() {
+		return mobNb;
+	}
 
-    /**
-     * Sets the value of the mobNb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMobNb(String value) {
-        this.mobNb = value;
-    }
+	/**
+	 * Sets the value of the mobNb property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setMobNb(String value) {
+		this.mobNb = value;
+	}
 
-    /**
-     * Gets the value of the faxNb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFaxNb() {
-        return faxNb;
-    }
+	/**
+	 * Gets the value of the faxNb property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getFaxNb() {
+		return faxNb;
+	}
 
-    /**
-     * Sets the value of the faxNb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFaxNb(String value) {
-        this.faxNb = value;
-    }
+	/**
+	 * Sets the value of the faxNb property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setFaxNb(String value) {
+		this.faxNb = value;
+	}
 
-    /**
-     * Gets the value of the emailAdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEmailAdr() {
-        return emailAdr;
-    }
+	/**
+	 * Gets the value of the emailAdr property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getEmailAdr() {
+		return emailAdr;
+	}
 
-    /**
-     * Sets the value of the emailAdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEmailAdr(String value) {
-        this.emailAdr = value;
-    }
+	/**
+	 * Sets the value of the emailAdr property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setEmailAdr(String value) {
+		this.emailAdr = value;
+	}
 
-    /**
-     * Gets the value of the othr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOthr() {
-        return othr;
-    }
+	/**
+	 * Gets the value of the othr property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getOthr() {
+		return othr;
+	}
 
-    /**
-     * Sets the value of the othr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOthr(String value) {
-        this.othr = value;
-    }
+	/**
+	 * Sets the value of the othr property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setOthr(String value) {
+		this.othr = value;
+	}
+
+	@Override
+	public String toString() {
+		return "ContactDetails2 [nmPrfx=" + nmPrfx + ", nm=" + nm + ", phneNb=" + phneNb + ", mobNb=" + mobNb
+				+ ", faxNb=" + faxNb + ", emailAdr=" + emailAdr + ", othr=" + othr + "]";
+	}
 
 }

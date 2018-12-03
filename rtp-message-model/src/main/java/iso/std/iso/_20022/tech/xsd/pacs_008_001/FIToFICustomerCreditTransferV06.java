@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for FIToFICustomerCreditTransferV06 complex type.
+ * <p>
+ * Java class for FIToFICustomerCreditTransferV06 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="FIToFICustomerCreditTransferV06">
@@ -38,100 +40,100 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FIToFICustomerCreditTransferV06", propOrder = {
-    "grpHdr",
-    "cdtTrfTxInf",
-    "splmtryData"
-})
+@XmlType(name = "FIToFICustomerCreditTransferV06", propOrder = { "grpHdr", "cdtTrfTxInf", "splmtryData" })
 public class FIToFICustomerCreditTransferV06 {
 
-    @XmlElement(name = "GrpHdr", required = true)
-    protected GroupHeader70 grpHdr;
-    @XmlElement(name = "CdtTrfTxInf", required = true)
-    protected List<CreditTransferTransaction25> cdtTrfTxInf;
-    @XmlElement(name = "SplmtryData")
-    protected List<SupplementaryData1> splmtryData;
+	@XmlElement(name = "GrpHdr", required = true)
+	protected GroupHeader70 grpHdr;
+	@XmlElement(name = "CdtTrfTxInf", required = true)
+	protected List<CreditTransferTransaction25> cdtTrfTxInf;
+	@XmlElement(name = "SplmtryData")
+	protected List<SupplementaryData1> splmtryData;
 
-    /**
-     * Gets the value of the grpHdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GroupHeader70 }
-     *     
-     */
-    public GroupHeader70 getGrpHdr() {
-        return grpHdr;
-    }
+	/**
+	 * Gets the value of the grpHdr property.
+	 * 
+	 * @return possible object is {@link GroupHeader70 }
+	 * 
+	 */
+	public GroupHeader70 getGrpHdr() {
+		return grpHdr;
+	}
 
-    /**
-     * Sets the value of the grpHdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GroupHeader70 }
-     *     
-     */
-    public void setGrpHdr(GroupHeader70 value) {
-        this.grpHdr = value;
-    }
+	/**
+	 * Sets the value of the grpHdr property.
+	 * 
+	 * @param value allowed object is {@link GroupHeader70 }
+	 * 
+	 */
+	public void setGrpHdr(GroupHeader70 value) {
+		this.grpHdr = value;
+	}
 
-    /**
-     * Gets the value of the cdtTrfTxInf property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cdtTrfTxInf property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCdtTrfTxInf().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link CreditTransferTransaction25 }
-     * 
-     * 
-     */
-    public List<CreditTransferTransaction25> getCdtTrfTxInf() {
-        if (cdtTrfTxInf == null) {
-            cdtTrfTxInf = new ArrayList<CreditTransferTransaction25>();
-        }
-        return this.cdtTrfTxInf;
-    }
+	/**
+	 * Gets the value of the cdtTrfTxInf property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the cdtTrfTxInf property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getCdtTrfTxInf().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link CreditTransferTransaction25 }
+	 * 
+	 * 
+	 */
+	public List<CreditTransferTransaction25> getCdtTrfTxInf() {
+		if (cdtTrfTxInf == null) {
+			cdtTrfTxInf = new ArrayList<CreditTransferTransaction25>();
+		}
+		return this.cdtTrfTxInf;
+	}
 
-    /**
-     * Gets the value of the splmtryData property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the splmtryData property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSplmtryData().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link SupplementaryData1 }
-     * 
-     * 
-     */
-    public List<SupplementaryData1> getSplmtryData() {
-        if (splmtryData == null) {
-            splmtryData = new ArrayList<SupplementaryData1>();
-        }
-        return this.splmtryData;
-    }
+	/**
+	 * Gets the value of the splmtryData property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the splmtryData property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSplmtryData().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link SupplementaryData1 }
+	 * 
+	 * 
+	 */
+	public List<SupplementaryData1> getSplmtryData() {
+		if (splmtryData == null) {
+			splmtryData = new ArrayList<SupplementaryData1>();
+		}
+		return this.splmtryData;
+	}
+
+	@Override
+	public String toString() {
+		return "FIToFICustomerCreditTransferV06 [grpHdr=" + grpHdr + ", cdtTrfTxInf=" + cdtTrfTxInf + ", splmtryData="
+				+ splmtryData + "]";
+	}
 
 }

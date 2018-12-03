@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for TaxPeriod1 complex type.
+ * <p>
+ * Java class for TaxPeriod1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="TaxPeriod1">
@@ -38,92 +39,81 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TaxPeriod1", propOrder = {
-    "yr",
-    "tp",
-    "frToDt"
-})
+@XmlType(name = "TaxPeriod1", propOrder = { "yr", "tp", "frToDt" })
 public class TaxPeriod1 {
 
-    @XmlElement(name = "Yr")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar yr;
-    @XmlElement(name = "Tp")
-    @XmlSchemaType(name = "string")
-    protected TaxRecordPeriod1Code tp;
-    @XmlElement(name = "FrToDt")
-    protected DatePeriodDetails frToDt;
+	@XmlElement(name = "Yr")
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar yr;
+	@XmlElement(name = "Tp")
+	@XmlSchemaType(name = "string")
+	protected TaxRecordPeriod1Code tp;
+	@XmlElement(name = "FrToDt")
+	protected DatePeriodDetails frToDt;
 
-    /**
-     * Gets the value of the yr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getYr() {
-        return yr;
-    }
+	/**
+	 * Gets the value of the yr property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getYr() {
+		return yr;
+	}
 
-    /**
-     * Sets the value of the yr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setYr(XMLGregorianCalendar value) {
-        this.yr = value;
-    }
+	/**
+	 * Sets the value of the yr property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setYr(XMLGregorianCalendar value) {
+		this.yr = value;
+	}
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TaxRecordPeriod1Code }
-     *     
-     */
-    public TaxRecordPeriod1Code getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link TaxRecordPeriod1Code }
+	 * 
+	 */
+	public TaxRecordPeriod1Code getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TaxRecordPeriod1Code }
-     *     
-     */
-    public void setTp(TaxRecordPeriod1Code value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link TaxRecordPeriod1Code }
+	 * 
+	 */
+	public void setTp(TaxRecordPeriod1Code value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the frToDt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatePeriodDetails }
-     *     
-     */
-    public DatePeriodDetails getFrToDt() {
-        return frToDt;
-    }
+	/**
+	 * Gets the value of the frToDt property.
+	 * 
+	 * @return possible object is {@link DatePeriodDetails }
+	 * 
+	 */
+	public DatePeriodDetails getFrToDt() {
+		return frToDt;
+	}
 
-    /**
-     * Sets the value of the frToDt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatePeriodDetails }
-     *     
-     */
-    public void setFrToDt(DatePeriodDetails value) {
-        this.frToDt = value;
-    }
+	/**
+	 * Sets the value of the frToDt property.
+	 * 
+	 * @param value allowed object is {@link DatePeriodDetails }
+	 * 
+	 */
+	public void setFrToDt(DatePeriodDetails value) {
+		this.frToDt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "TaxPeriod1 [yr=" + yr + ", tp=" + tp + ", frToDt=" + frToDt + "]";
+	}
 
 }

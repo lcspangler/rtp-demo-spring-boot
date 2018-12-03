@@ -1,15 +1,17 @@
 package rtp.demo.mock.routes;
 
-import java.math.BigDecimal;
-
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import iso.std.iso._20022.tech.xsd.pacs_008_001.BranchAndFinancialInstitutionIdentification5;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.ClearingSystemMemberIdentification2;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.FIToFICustomerCreditTransferV06;
-import rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessage;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.FinancialInstitutionIdentification8;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.GroupHeader70;
+import iso.std.iso._20022.tech.xsd.pacs_008_001.PaymentTypeInformation21;
 
 @Component
 public class MockRtpRouteBuilder extends RouteBuilder {
@@ -34,18 +36,8 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 		LOG.info("COMPONENTS: " + this.getContext().getComponentNames());
 
-		CreditTransferMessage creditTransferMessage = new CreditTransferMessage();
-		creditTransferMessage.setCreditTransferMessageId("M2018111511021200201BFFF00000000001");
-		// creditTransferMessage.setCreationDateTime(LocalDateTime.parse("2018-11-12T10:05:00"));
-		creditTransferMessage.setNumberOfTransactions(Integer.valueOf("1"));
-		creditTransferMessage.setPaymentAmount(new BigDecimal("512.23"));
-		creditTransferMessage.setPaymentCurrency("USD");
-		creditTransferMessage.setCreditorId("020010001");
-		creditTransferMessage.setCreditorAccountNumber("12000194212199001");
-		creditTransferMessage.setSettlementMethod("CLRG");
-
-		from("timer://foo?period=10000").setBody().constant(creditTransferMessage).log(">>> ${body}").to(
-				"kafka:my-topic-1?serializerClass=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageSerializer");
+		from("timer://foo?period=10000").setBody().constant(makeDummyRtpCreditTransferMessage()).log(">>> ${body}").to(
+				"kafka:my-topic-1?serializerClass=rtp.message.model.serde.FIToFICustomerCreditTransferV06Serializer");
 	}
 
 	public String getKafkaBootstrap() {
@@ -66,6 +58,33 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 	private FIToFICustomerCreditTransferV06 makeDummyRtpCreditTransferMessage() {
 		FIToFICustomerCreditTransferV06 dummyRtpCreditTransferMessage = new FIToFICustomerCreditTransferV06();
+		dummyRtpCreditTransferMessage.setGrpHdr(new GroupHeader70());
+
+		// Set Credit Transfer Message Id
+		dummyRtpCreditTransferMessage.getGrpHdr().setMsgId("M2015111511021200201BFFF00000000001");
+
+		// dummyRtpCreditTransferMessage.getGrpHdr().setCreDtTm(new);
+
+		// Set Debtor Id
+		dummyRtpCreditTransferMessage.getGrpHdr().setInstgAgt(new BranchAndFinancialInstitutionIdentification5());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstgAgt()
+				.setFinInstnId(new FinancialInstitutionIdentification8());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstgAgt().getFinInstnId()
+				.setClrSysMmbId(new ClearingSystemMemberIdentification2());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstgAgt().getFinInstnId().getClrSysMmbId().setMmbId("021200201");
+
+		// Set Creditor Id
+		dummyRtpCreditTransferMessage.getGrpHdr().setInstdAgt(new BranchAndFinancialInstitutionIdentification5());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstdAgt()
+				.setFinInstnId(new FinancialInstitutionIdentification8());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstdAgt().getFinInstnId()
+				.setClrSysMmbId(new ClearingSystemMemberIdentification2());
+		dummyRtpCreditTransferMessage.getGrpHdr().getInstdAgt().getFinInstnId().getClrSysMmbId().setMmbId("020010001");
+
+		// .setInstdAgt(new BranchAndFinancialInstitutionIdentification5());
+
+		dummyRtpCreditTransferMessage.getGrpHdr().setPmtTpInf(new PaymentTypeInformation21());
+		// dummyRtpCreditTransferMessage.getGrpHdr().getPmtTpInf().s
 
 		return dummyRtpCreditTransferMessage;
 	}

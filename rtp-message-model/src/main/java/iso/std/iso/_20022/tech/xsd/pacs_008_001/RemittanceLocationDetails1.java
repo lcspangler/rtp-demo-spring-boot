@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for RemittanceLocationDetails1 complex type.
+ * <p>
+ * Java class for RemittanceLocationDetails1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="RemittanceLocationDetails1">
@@ -37,91 +38,80 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RemittanceLocationDetails1", propOrder = {
-    "mtd",
-    "elctrncAdr",
-    "pstlAdr"
-})
+@XmlType(name = "RemittanceLocationDetails1", propOrder = { "mtd", "elctrncAdr", "pstlAdr" })
 public class RemittanceLocationDetails1 {
 
-    @XmlElement(name = "Mtd", required = true)
-    @XmlSchemaType(name = "string")
-    protected RemittanceLocationMethod2Code mtd;
-    @XmlElement(name = "ElctrncAdr")
-    protected String elctrncAdr;
-    @XmlElement(name = "PstlAdr")
-    protected NameAndAddress10 pstlAdr;
+	@XmlElement(name = "Mtd", required = true)
+	@XmlSchemaType(name = "string")
+	protected RemittanceLocationMethod2Code mtd;
+	@XmlElement(name = "ElctrncAdr")
+	protected String elctrncAdr;
+	@XmlElement(name = "PstlAdr")
+	protected NameAndAddress10 pstlAdr;
 
-    /**
-     * Gets the value of the mtd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RemittanceLocationMethod2Code }
-     *     
-     */
-    public RemittanceLocationMethod2Code getMtd() {
-        return mtd;
-    }
+	/**
+	 * Gets the value of the mtd property.
+	 * 
+	 * @return possible object is {@link RemittanceLocationMethod2Code }
+	 * 
+	 */
+	public RemittanceLocationMethod2Code getMtd() {
+		return mtd;
+	}
 
-    /**
-     * Sets the value of the mtd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RemittanceLocationMethod2Code }
-     *     
-     */
-    public void setMtd(RemittanceLocationMethod2Code value) {
-        this.mtd = value;
-    }
+	/**
+	 * Sets the value of the mtd property.
+	 * 
+	 * @param value allowed object is {@link RemittanceLocationMethod2Code }
+	 * 
+	 */
+	public void setMtd(RemittanceLocationMethod2Code value) {
+		this.mtd = value;
+	}
 
-    /**
-     * Gets the value of the elctrncAdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getElctrncAdr() {
-        return elctrncAdr;
-    }
+	/**
+	 * Gets the value of the elctrncAdr property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getElctrncAdr() {
+		return elctrncAdr;
+	}
 
-    /**
-     * Sets the value of the elctrncAdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setElctrncAdr(String value) {
-        this.elctrncAdr = value;
-    }
+	/**
+	 * Sets the value of the elctrncAdr property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setElctrncAdr(String value) {
+		this.elctrncAdr = value;
+	}
 
-    /**
-     * Gets the value of the pstlAdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NameAndAddress10 }
-     *     
-     */
-    public NameAndAddress10 getPstlAdr() {
-        return pstlAdr;
-    }
+	/**
+	 * Gets the value of the pstlAdr property.
+	 * 
+	 * @return possible object is {@link NameAndAddress10 }
+	 * 
+	 */
+	public NameAndAddress10 getPstlAdr() {
+		return pstlAdr;
+	}
 
-    /**
-     * Sets the value of the pstlAdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NameAndAddress10 }
-     *     
-     */
-    public void setPstlAdr(NameAndAddress10 value) {
-        this.pstlAdr = value;
-    }
+	/**
+	 * Sets the value of the pstlAdr property.
+	 * 
+	 * @param value allowed object is {@link NameAndAddress10 }
+	 * 
+	 */
+	public void setPstlAdr(NameAndAddress10 value) {
+		this.pstlAdr = value;
+	}
+
+	@Override
+	public String toString() {
+		return "RemittanceLocationDetails1 [mtd=" + mtd + ", elctrncAdr=" + elctrncAdr + ", pstlAdr=" + pstlAdr + "]";
+	}
 
 }

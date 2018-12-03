@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for DateAndPlaceOfBirth complex type.
+ * <p>
+ * Java class for DateAndPlaceOfBirth complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="DateAndPlaceOfBirth">
@@ -39,118 +40,103 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DateAndPlaceOfBirth", propOrder = {
-    "birthDt",
-    "prvcOfBirth",
-    "cityOfBirth",
-    "ctryOfBirth"
-})
+@XmlType(name = "DateAndPlaceOfBirth", propOrder = { "birthDt", "prvcOfBirth", "cityOfBirth", "ctryOfBirth" })
 public class DateAndPlaceOfBirth {
 
-    @XmlElement(name = "BirthDt", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDt;
-    @XmlElement(name = "PrvcOfBirth")
-    protected String prvcOfBirth;
-    @XmlElement(name = "CityOfBirth", required = true)
-    protected String cityOfBirth;
-    @XmlElement(name = "CtryOfBirth", required = true)
-    protected String ctryOfBirth;
+	@XmlElement(name = "BirthDt", required = true)
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar birthDt;
+	@XmlElement(name = "PrvcOfBirth")
+	protected String prvcOfBirth;
+	@XmlElement(name = "CityOfBirth", required = true)
+	protected String cityOfBirth;
+	@XmlElement(name = "CtryOfBirth", required = true)
+	protected String ctryOfBirth;
 
-    /**
-     * Gets the value of the birthDt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getBirthDt() {
-        return birthDt;
-    }
+	/**
+	 * Gets the value of the birthDt property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getBirthDt() {
+		return birthDt;
+	}
 
-    /**
-     * Sets the value of the birthDt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setBirthDt(XMLGregorianCalendar value) {
-        this.birthDt = value;
-    }
+	/**
+	 * Sets the value of the birthDt property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setBirthDt(XMLGregorianCalendar value) {
+		this.birthDt = value;
+	}
 
-    /**
-     * Gets the value of the prvcOfBirth property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPrvcOfBirth() {
-        return prvcOfBirth;
-    }
+	/**
+	 * Gets the value of the prvcOfBirth property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPrvcOfBirth() {
+		return prvcOfBirth;
+	}
 
-    /**
-     * Sets the value of the prvcOfBirth property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPrvcOfBirth(String value) {
-        this.prvcOfBirth = value;
-    }
+	/**
+	 * Sets the value of the prvcOfBirth property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setPrvcOfBirth(String value) {
+		this.prvcOfBirth = value;
+	}
 
-    /**
-     * Gets the value of the cityOfBirth property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCityOfBirth() {
-        return cityOfBirth;
-    }
+	/**
+	 * Gets the value of the cityOfBirth property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCityOfBirth() {
+		return cityOfBirth;
+	}
 
-    /**
-     * Sets the value of the cityOfBirth property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCityOfBirth(String value) {
-        this.cityOfBirth = value;
-    }
+	/**
+	 * Sets the value of the cityOfBirth property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setCityOfBirth(String value) {
+		this.cityOfBirth = value;
+	}
 
-    /**
-     * Gets the value of the ctryOfBirth property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCtryOfBirth() {
-        return ctryOfBirth;
-    }
+	/**
+	 * Gets the value of the ctryOfBirth property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCtryOfBirth() {
+		return ctryOfBirth;
+	}
 
-    /**
-     * Sets the value of the ctryOfBirth property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCtryOfBirth(String value) {
-        this.ctryOfBirth = value;
-    }
+	/**
+	 * Sets the value of the ctryOfBirth property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setCtryOfBirth(String value) {
+		this.ctryOfBirth = value;
+	}
+
+	@Override
+	public String toString() {
+		return "DateAndPlaceOfBirth [birthDt=" + birthDt + ", prvcOfBirth=" + prvcOfBirth + ", cityOfBirth="
+				+ cityOfBirth + ", ctryOfBirth=" + ctryOfBirth + "]";
+	}
 
 }

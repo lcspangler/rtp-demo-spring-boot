@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for RemittanceAmount2 complex type.
+ * <p>
+ * Java class for RemittanceAmount2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="RemittanceAmount2">
@@ -41,186 +43,178 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RemittanceAmount2", propOrder = {
-    "duePyblAmt",
-    "dscntApldAmt",
-    "cdtNoteAmt",
-    "taxAmt",
-    "adjstmntAmtAndRsn",
-    "rmtdAmt"
-})
+@XmlType(name = "RemittanceAmount2", propOrder = { "duePyblAmt", "dscntApldAmt", "cdtNoteAmt", "taxAmt",
+		"adjstmntAmtAndRsn", "rmtdAmt" })
 public class RemittanceAmount2 {
 
-    @XmlElement(name = "DuePyblAmt")
-    protected ActiveOrHistoricCurrencyAndAmount duePyblAmt;
-    @XmlElement(name = "DscntApldAmt")
-    protected List<DiscountAmountAndType1> dscntApldAmt;
-    @XmlElement(name = "CdtNoteAmt")
-    protected ActiveOrHistoricCurrencyAndAmount cdtNoteAmt;
-    @XmlElement(name = "TaxAmt")
-    protected List<TaxAmountAndType1> taxAmt;
-    @XmlElement(name = "AdjstmntAmtAndRsn")
-    protected List<DocumentAdjustment1> adjstmntAmtAndRsn;
-    @XmlElement(name = "RmtdAmt")
-    protected ActiveOrHistoricCurrencyAndAmount rmtdAmt;
+	@XmlElement(name = "DuePyblAmt")
+	protected ActiveOrHistoricCurrencyAndAmount duePyblAmt;
+	@XmlElement(name = "DscntApldAmt")
+	protected List<DiscountAmountAndType1> dscntApldAmt;
+	@XmlElement(name = "CdtNoteAmt")
+	protected ActiveOrHistoricCurrencyAndAmount cdtNoteAmt;
+	@XmlElement(name = "TaxAmt")
+	protected List<TaxAmountAndType1> taxAmt;
+	@XmlElement(name = "AdjstmntAmtAndRsn")
+	protected List<DocumentAdjustment1> adjstmntAmtAndRsn;
+	@XmlElement(name = "RmtdAmt")
+	protected ActiveOrHistoricCurrencyAndAmount rmtdAmt;
 
-    /**
-     * Gets the value of the duePyblAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getDuePyblAmt() {
-        return duePyblAmt;
-    }
+	/**
+	 * Gets the value of the duePyblAmt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getDuePyblAmt() {
+		return duePyblAmt;
+	}
 
-    /**
-     * Sets the value of the duePyblAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setDuePyblAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.duePyblAmt = value;
-    }
+	/**
+	 * Sets the value of the duePyblAmt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setDuePyblAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.duePyblAmt = value;
+	}
 
-    /**
-     * Gets the value of the dscntApldAmt property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the dscntApldAmt property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getDscntApldAmt().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link DiscountAmountAndType1 }
-     * 
-     * 
-     */
-    public List<DiscountAmountAndType1> getDscntApldAmt() {
-        if (dscntApldAmt == null) {
-            dscntApldAmt = new ArrayList<DiscountAmountAndType1>();
-        }
-        return this.dscntApldAmt;
-    }
+	/**
+	 * Gets the value of the dscntApldAmt property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the dscntApldAmt property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getDscntApldAmt().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link DiscountAmountAndType1 }
+	 * 
+	 * 
+	 */
+	public List<DiscountAmountAndType1> getDscntApldAmt() {
+		if (dscntApldAmt == null) {
+			dscntApldAmt = new ArrayList<DiscountAmountAndType1>();
+		}
+		return this.dscntApldAmt;
+	}
 
-    /**
-     * Gets the value of the cdtNoteAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getCdtNoteAmt() {
-        return cdtNoteAmt;
-    }
+	/**
+	 * Gets the value of the cdtNoteAmt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getCdtNoteAmt() {
+		return cdtNoteAmt;
+	}
 
-    /**
-     * Sets the value of the cdtNoteAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setCdtNoteAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.cdtNoteAmt = value;
-    }
+	/**
+	 * Sets the value of the cdtNoteAmt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setCdtNoteAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.cdtNoteAmt = value;
+	}
 
-    /**
-     * Gets the value of the taxAmt property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the taxAmt property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getTaxAmt().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link TaxAmountAndType1 }
-     * 
-     * 
-     */
-    public List<TaxAmountAndType1> getTaxAmt() {
-        if (taxAmt == null) {
-            taxAmt = new ArrayList<TaxAmountAndType1>();
-        }
-        return this.taxAmt;
-    }
+	/**
+	 * Gets the value of the taxAmt property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the taxAmt property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getTaxAmt().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link TaxAmountAndType1 }
+	 * 
+	 * 
+	 */
+	public List<TaxAmountAndType1> getTaxAmt() {
+		if (taxAmt == null) {
+			taxAmt = new ArrayList<TaxAmountAndType1>();
+		}
+		return this.taxAmt;
+	}
 
-    /**
-     * Gets the value of the adjstmntAmtAndRsn property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the adjstmntAmtAndRsn property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAdjstmntAmtAndRsn().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link DocumentAdjustment1 }
-     * 
-     * 
-     */
-    public List<DocumentAdjustment1> getAdjstmntAmtAndRsn() {
-        if (adjstmntAmtAndRsn == null) {
-            adjstmntAmtAndRsn = new ArrayList<DocumentAdjustment1>();
-        }
-        return this.adjstmntAmtAndRsn;
-    }
+	/**
+	 * Gets the value of the adjstmntAmtAndRsn property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the adjstmntAmtAndRsn property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAdjstmntAmtAndRsn().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link DocumentAdjustment1 }
+	 * 
+	 * 
+	 */
+	public List<DocumentAdjustment1> getAdjstmntAmtAndRsn() {
+		if (adjstmntAmtAndRsn == null) {
+			adjstmntAmtAndRsn = new ArrayList<DocumentAdjustment1>();
+		}
+		return this.adjstmntAmtAndRsn;
+	}
 
-    /**
-     * Gets the value of the rmtdAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getRmtdAmt() {
-        return rmtdAmt;
-    }
+	/**
+	 * Gets the value of the rmtdAmt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getRmtdAmt() {
+		return rmtdAmt;
+	}
 
-    /**
-     * Sets the value of the rmtdAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setRmtdAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.rmtdAmt = value;
-    }
+	/**
+	 * Sets the value of the rmtdAmt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setRmtdAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.rmtdAmt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "RemittanceAmount2 [duePyblAmt=" + duePyblAmt + ", dscntApldAmt=" + dscntApldAmt + ", cdtNoteAmt="
+				+ cdtNoteAmt + ", taxAmt=" + taxAmt + ", adjstmntAmtAndRsn=" + adjstmntAmtAndRsn + ", rmtdAmt="
+				+ rmtdAmt + "]";
+	}
 
 }

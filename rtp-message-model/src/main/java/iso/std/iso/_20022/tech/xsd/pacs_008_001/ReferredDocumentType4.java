@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ReferredDocumentType4 complex type.
+ * <p>
+ * Java class for ReferredDocumentType4 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ReferredDocumentType4">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferredDocumentType4", propOrder = {
-    "cdOrPrtry",
-    "issr"
-})
+@XmlType(name = "ReferredDocumentType4", propOrder = { "cdOrPrtry", "issr" })
 public class ReferredDocumentType4 {
 
-    @XmlElement(name = "CdOrPrtry", required = true)
-    protected ReferredDocumentType3Choice cdOrPrtry;
-    @XmlElement(name = "Issr")
-    protected String issr;
+	@XmlElement(name = "CdOrPrtry", required = true)
+	protected ReferredDocumentType3Choice cdOrPrtry;
+	@XmlElement(name = "Issr")
+	protected String issr;
 
-    /**
-     * Gets the value of the cdOrPrtry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReferredDocumentType3Choice }
-     *     
-     */
-    public ReferredDocumentType3Choice getCdOrPrtry() {
-        return cdOrPrtry;
-    }
+	/**
+	 * Gets the value of the cdOrPrtry property.
+	 * 
+	 * @return possible object is {@link ReferredDocumentType3Choice }
+	 * 
+	 */
+	public ReferredDocumentType3Choice getCdOrPrtry() {
+		return cdOrPrtry;
+	}
 
-    /**
-     * Sets the value of the cdOrPrtry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReferredDocumentType3Choice }
-     *     
-     */
-    public void setCdOrPrtry(ReferredDocumentType3Choice value) {
-        this.cdOrPrtry = value;
-    }
+	/**
+	 * Sets the value of the cdOrPrtry property.
+	 * 
+	 * @param value allowed object is {@link ReferredDocumentType3Choice }
+	 * 
+	 */
+	public void setCdOrPrtry(ReferredDocumentType3Choice value) {
+		this.cdOrPrtry = value;
+	}
 
-    /**
-     * Gets the value of the issr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIssr() {
-        return issr;
-    }
+	/**
+	 * Gets the value of the issr property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getIssr() {
+		return issr;
+	}
 
-    /**
-     * Sets the value of the issr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIssr(String value) {
-        this.issr = value;
-    }
+	/**
+	 * Sets the value of the issr property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setIssr(String value) {
+		this.issr = value;
+	}
+
+	@Override
+	public String toString() {
+		return "ReferredDocumentType4 [cdOrPrtry=" + cdOrPrtry + ", issr=" + issr + "]";
+	}
 
 }

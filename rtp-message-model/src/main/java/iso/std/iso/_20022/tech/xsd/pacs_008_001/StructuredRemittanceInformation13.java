@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for StructuredRemittanceInformation13 complex type.
+ * <p>
+ * Java class for StructuredRemittanceInformation13 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="StructuredRemittanceInformation13">
@@ -43,235 +45,211 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StructuredRemittanceInformation13", propOrder = {
-    "rfrdDocInf",
-    "rfrdDocAmt",
-    "cdtrRefInf",
-    "invcr",
-    "invcee",
-    "taxRmt",
-    "grnshmtRmt",
-    "addtlRmtInf"
-})
+@XmlType(name = "StructuredRemittanceInformation13", propOrder = { "rfrdDocInf", "rfrdDocAmt", "cdtrRefInf", "invcr",
+		"invcee", "taxRmt", "grnshmtRmt", "addtlRmtInf" })
 public class StructuredRemittanceInformation13 {
 
-    @XmlElement(name = "RfrdDocInf")
-    protected List<ReferredDocumentInformation7> rfrdDocInf;
-    @XmlElement(name = "RfrdDocAmt")
-    protected RemittanceAmount2 rfrdDocAmt;
-    @XmlElement(name = "CdtrRefInf")
-    protected CreditorReferenceInformation2 cdtrRefInf;
-    @XmlElement(name = "Invcr")
-    protected PartyIdentification43 invcr;
-    @XmlElement(name = "Invcee")
-    protected PartyIdentification43 invcee;
-    @XmlElement(name = "TaxRmt")
-    protected TaxInformation4 taxRmt;
-    @XmlElement(name = "GrnshmtRmt")
-    protected Garnishment1 grnshmtRmt;
-    @XmlElement(name = "AddtlRmtInf")
-    protected List<String> addtlRmtInf;
+	@XmlElement(name = "RfrdDocInf")
+	protected List<ReferredDocumentInformation7> rfrdDocInf;
+	@XmlElement(name = "RfrdDocAmt")
+	protected RemittanceAmount2 rfrdDocAmt;
+	@XmlElement(name = "CdtrRefInf")
+	protected CreditorReferenceInformation2 cdtrRefInf;
+	@XmlElement(name = "Invcr")
+	protected PartyIdentification43 invcr;
+	@XmlElement(name = "Invcee")
+	protected PartyIdentification43 invcee;
+	@XmlElement(name = "TaxRmt")
+	protected TaxInformation4 taxRmt;
+	@XmlElement(name = "GrnshmtRmt")
+	protected Garnishment1 grnshmtRmt;
+	@XmlElement(name = "AddtlRmtInf")
+	protected List<String> addtlRmtInf;
 
-    /**
-     * Gets the value of the rfrdDocInf property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rfrdDocInf property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getRfrdDocInf().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ReferredDocumentInformation7 }
-     * 
-     * 
-     */
-    public List<ReferredDocumentInformation7> getRfrdDocInf() {
-        if (rfrdDocInf == null) {
-            rfrdDocInf = new ArrayList<ReferredDocumentInformation7>();
-        }
-        return this.rfrdDocInf;
-    }
+	/**
+	 * Gets the value of the rfrdDocInf property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the rfrdDocInf property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getRfrdDocInf().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link ReferredDocumentInformation7 }
+	 * 
+	 * 
+	 */
+	public List<ReferredDocumentInformation7> getRfrdDocInf() {
+		if (rfrdDocInf == null) {
+			rfrdDocInf = new ArrayList<ReferredDocumentInformation7>();
+		}
+		return this.rfrdDocInf;
+	}
 
-    /**
-     * Gets the value of the rfrdDocAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RemittanceAmount2 }
-     *     
-     */
-    public RemittanceAmount2 getRfrdDocAmt() {
-        return rfrdDocAmt;
-    }
+	/**
+	 * Gets the value of the rfrdDocAmt property.
+	 * 
+	 * @return possible object is {@link RemittanceAmount2 }
+	 * 
+	 */
+	public RemittanceAmount2 getRfrdDocAmt() {
+		return rfrdDocAmt;
+	}
 
-    /**
-     * Sets the value of the rfrdDocAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RemittanceAmount2 }
-     *     
-     */
-    public void setRfrdDocAmt(RemittanceAmount2 value) {
-        this.rfrdDocAmt = value;
-    }
+	/**
+	 * Sets the value of the rfrdDocAmt property.
+	 * 
+	 * @param value allowed object is {@link RemittanceAmount2 }
+	 * 
+	 */
+	public void setRfrdDocAmt(RemittanceAmount2 value) {
+		this.rfrdDocAmt = value;
+	}
 
-    /**
-     * Gets the value of the cdtrRefInf property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CreditorReferenceInformation2 }
-     *     
-     */
-    public CreditorReferenceInformation2 getCdtrRefInf() {
-        return cdtrRefInf;
-    }
+	/**
+	 * Gets the value of the cdtrRefInf property.
+	 * 
+	 * @return possible object is {@link CreditorReferenceInformation2 }
+	 * 
+	 */
+	public CreditorReferenceInformation2 getCdtrRefInf() {
+		return cdtrRefInf;
+	}
 
-    /**
-     * Sets the value of the cdtrRefInf property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CreditorReferenceInformation2 }
-     *     
-     */
-    public void setCdtrRefInf(CreditorReferenceInformation2 value) {
-        this.cdtrRefInf = value;
-    }
+	/**
+	 * Sets the value of the cdtrRefInf property.
+	 * 
+	 * @param value allowed object is {@link CreditorReferenceInformation2 }
+	 * 
+	 */
+	public void setCdtrRefInf(CreditorReferenceInformation2 value) {
+		this.cdtrRefInf = value;
+	}
 
-    /**
-     * Gets the value of the invcr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public PartyIdentification43 getInvcr() {
-        return invcr;
-    }
+	/**
+	 * Gets the value of the invcr property.
+	 * 
+	 * @return possible object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public PartyIdentification43 getInvcr() {
+		return invcr;
+	}
 
-    /**
-     * Sets the value of the invcr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public void setInvcr(PartyIdentification43 value) {
-        this.invcr = value;
-    }
+	/**
+	 * Sets the value of the invcr property.
+	 * 
+	 * @param value allowed object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public void setInvcr(PartyIdentification43 value) {
+		this.invcr = value;
+	}
 
-    /**
-     * Gets the value of the invcee property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public PartyIdentification43 getInvcee() {
-        return invcee;
-    }
+	/**
+	 * Gets the value of the invcee property.
+	 * 
+	 * @return possible object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public PartyIdentification43 getInvcee() {
+		return invcee;
+	}
 
-    /**
-     * Sets the value of the invcee property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public void setInvcee(PartyIdentification43 value) {
-        this.invcee = value;
-    }
+	/**
+	 * Sets the value of the invcee property.
+	 * 
+	 * @param value allowed object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public void setInvcee(PartyIdentification43 value) {
+		this.invcee = value;
+	}
 
-    /**
-     * Gets the value of the taxRmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TaxInformation4 }
-     *     
-     */
-    public TaxInformation4 getTaxRmt() {
-        return taxRmt;
-    }
+	/**
+	 * Gets the value of the taxRmt property.
+	 * 
+	 * @return possible object is {@link TaxInformation4 }
+	 * 
+	 */
+	public TaxInformation4 getTaxRmt() {
+		return taxRmt;
+	}
 
-    /**
-     * Sets the value of the taxRmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TaxInformation4 }
-     *     
-     */
-    public void setTaxRmt(TaxInformation4 value) {
-        this.taxRmt = value;
-    }
+	/**
+	 * Sets the value of the taxRmt property.
+	 * 
+	 * @param value allowed object is {@link TaxInformation4 }
+	 * 
+	 */
+	public void setTaxRmt(TaxInformation4 value) {
+		this.taxRmt = value;
+	}
 
-    /**
-     * Gets the value of the grnshmtRmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Garnishment1 }
-     *     
-     */
-    public Garnishment1 getGrnshmtRmt() {
-        return grnshmtRmt;
-    }
+	/**
+	 * Gets the value of the grnshmtRmt property.
+	 * 
+	 * @return possible object is {@link Garnishment1 }
+	 * 
+	 */
+	public Garnishment1 getGrnshmtRmt() {
+		return grnshmtRmt;
+	}
 
-    /**
-     * Sets the value of the grnshmtRmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Garnishment1 }
-     *     
-     */
-    public void setGrnshmtRmt(Garnishment1 value) {
-        this.grnshmtRmt = value;
-    }
+	/**
+	 * Sets the value of the grnshmtRmt property.
+	 * 
+	 * @param value allowed object is {@link Garnishment1 }
+	 * 
+	 */
+	public void setGrnshmtRmt(Garnishment1 value) {
+		this.grnshmtRmt = value;
+	}
 
-    /**
-     * Gets the value of the addtlRmtInf property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addtlRmtInf property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddtlRmtInf().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getAddtlRmtInf() {
-        if (addtlRmtInf == null) {
-            addtlRmtInf = new ArrayList<String>();
-        }
-        return this.addtlRmtInf;
-    }
+	/**
+	 * Gets the value of the addtlRmtInf property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the addtlRmtInf property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddtlRmtInf().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getAddtlRmtInf() {
+		if (addtlRmtInf == null) {
+			addtlRmtInf = new ArrayList<String>();
+		}
+		return this.addtlRmtInf;
+	}
+
+	@Override
+	public String toString() {
+		return "StructuredRemittanceInformation13 [rfrdDocInf=" + rfrdDocInf + ", rfrdDocAmt=" + rfrdDocAmt
+				+ ", cdtrRefInf=" + cdtrRefInf + ", invcr=" + invcr + ", invcee=" + invcee + ", taxRmt=" + taxRmt
+				+ ", grnshmtRmt=" + grnshmtRmt + ", addtlRmtInf=" + addtlRmtInf + "]";
+	}
 
 }

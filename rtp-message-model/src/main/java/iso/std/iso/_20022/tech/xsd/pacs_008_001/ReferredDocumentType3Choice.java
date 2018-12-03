@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ReferredDocumentType3Choice complex type.
+ * <p>
+ * Java class for ReferredDocumentType3Choice complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ReferredDocumentType3Choice">
@@ -36,64 +37,58 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferredDocumentType3Choice", propOrder = {
-    "cd",
-    "prtry"
-})
+@XmlType(name = "ReferredDocumentType3Choice", propOrder = { "cd", "prtry" })
 public class ReferredDocumentType3Choice {
 
-    @XmlElement(name = "Cd")
-    @XmlSchemaType(name = "string")
-    protected DocumentType6Code cd;
-    @XmlElement(name = "Prtry")
-    protected String prtry;
+	@XmlElement(name = "Cd")
+	@XmlSchemaType(name = "string")
+	protected DocumentType6Code cd;
+	@XmlElement(name = "Prtry")
+	protected String prtry;
 
-    /**
-     * Gets the value of the cd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DocumentType6Code }
-     *     
-     */
-    public DocumentType6Code getCd() {
-        return cd;
-    }
+	/**
+	 * Gets the value of the cd property.
+	 * 
+	 * @return possible object is {@link DocumentType6Code }
+	 * 
+	 */
+	public DocumentType6Code getCd() {
+		return cd;
+	}
 
-    /**
-     * Sets the value of the cd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DocumentType6Code }
-     *     
-     */
-    public void setCd(DocumentType6Code value) {
-        this.cd = value;
-    }
+	/**
+	 * Sets the value of the cd property.
+	 * 
+	 * @param value allowed object is {@link DocumentType6Code }
+	 * 
+	 */
+	public void setCd(DocumentType6Code value) {
+		this.cd = value;
+	}
 
-    /**
-     * Gets the value of the prtry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPrtry() {
-        return prtry;
-    }
+	/**
+	 * Gets the value of the prtry property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPrtry() {
+		return prtry;
+	}
 
-    /**
-     * Sets the value of the prtry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPrtry(String value) {
-        this.prtry = value;
-    }
+	/**
+	 * Sets the value of the prtry property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setPrtry(String value) {
+		this.prtry = value;
+	}
+
+	@Override
+	public String toString() {
+		return "ReferredDocumentType3Choice [cd=" + cd + ", prtry=" + prtry + "]";
+	}
 
 }

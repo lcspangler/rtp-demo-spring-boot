@@ -18,7 +18,7 @@
     <module>rtp-creditor-validation-model</module>
     <module>rtp-creditor-validation-rules</module>
     <module>rtp-demo-mock</module>
-    <module>rtp-creditor-intake</module>
+   <!-- <module>rtp-creditor-intake</module>-->
   </modules>
 
   <profiles>

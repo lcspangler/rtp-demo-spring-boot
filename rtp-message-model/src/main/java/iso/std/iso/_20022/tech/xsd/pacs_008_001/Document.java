@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Document complex type.
+ * <p>
+ * Java class for Document complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Document">
@@ -34,36 +35,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Document", propOrder = {
-    "fiToFICstmrCdtTrf"
-})
+@XmlType(name = "Document", propOrder = { "fiToFICstmrCdtTrf" })
 public class Document {
 
-    @XmlElement(name = "FIToFICstmrCdtTrf", required = true)
-    protected FIToFICustomerCreditTransferV06 fiToFICstmrCdtTrf;
+	@XmlElement(name = "FIToFICstmrCdtTrf", required = true)
+	protected FIToFICustomerCreditTransferV06 fiToFICstmrCdtTrf;
 
-    /**
-     * Gets the value of the fiToFICstmrCdtTrf property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FIToFICustomerCreditTransferV06 }
-     *     
-     */
-    public FIToFICustomerCreditTransferV06 getFIToFICstmrCdtTrf() {
-        return fiToFICstmrCdtTrf;
-    }
+	/**
+	 * Gets the value of the fiToFICstmrCdtTrf property.
+	 * 
+	 * @return possible object is {@link FIToFICustomerCreditTransferV06 }
+	 * 
+	 */
+	public FIToFICustomerCreditTransferV06 getFIToFICstmrCdtTrf() {
+		return fiToFICstmrCdtTrf;
+	}
 
-    /**
-     * Sets the value of the fiToFICstmrCdtTrf property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FIToFICustomerCreditTransferV06 }
-     *     
-     */
-    public void setFIToFICstmrCdtTrf(FIToFICustomerCreditTransferV06 value) {
-        this.fiToFICstmrCdtTrf = value;
-    }
+	/**
+	 * Sets the value of the fiToFICstmrCdtTrf property.
+	 * 
+	 * @param value allowed object is {@link FIToFICustomerCreditTransferV06 }
+	 * 
+	 */
+	public void setFIToFICstmrCdtTrf(FIToFICustomerCreditTransferV06 value) {
+		this.fiToFICstmrCdtTrf = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Document [fiToFICstmrCdtTrf=" + fiToFICstmrCdtTrf + "]";
+	}
 
 }

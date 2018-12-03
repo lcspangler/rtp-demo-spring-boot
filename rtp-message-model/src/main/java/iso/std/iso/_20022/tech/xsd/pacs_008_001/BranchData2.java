@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for BranchData2 complex type.
+ * <p>
+ * Java class for BranchData2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="BranchData2">
@@ -36,90 +37,79 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BranchData2", propOrder = {
-    "id",
-    "nm",
-    "pstlAdr"
-})
+@XmlType(name = "BranchData2", propOrder = { "id", "nm", "pstlAdr" })
 public class BranchData2 {
 
-    @XmlElement(name = "Id")
-    protected String id;
-    @XmlElement(name = "Nm")
-    protected String nm;
-    @XmlElement(name = "PstlAdr")
-    protected PostalAddress6 pstlAdr;
+	@XmlElement(name = "Id")
+	protected String id;
+	@XmlElement(name = "Nm")
+	protected String nm;
+	@XmlElement(name = "PstlAdr")
+	protected PostalAddress6 pstlAdr;
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the nm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNm() {
-        return nm;
-    }
+	/**
+	 * Gets the value of the nm property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getNm() {
+		return nm;
+	}
 
-    /**
-     * Sets the value of the nm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNm(String value) {
-        this.nm = value;
-    }
+	/**
+	 * Sets the value of the nm property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setNm(String value) {
+		this.nm = value;
+	}
 
-    /**
-     * Gets the value of the pstlAdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PostalAddress6 }
-     *     
-     */
-    public PostalAddress6 getPstlAdr() {
-        return pstlAdr;
-    }
+	/**
+	 * Gets the value of the pstlAdr property.
+	 * 
+	 * @return possible object is {@link PostalAddress6 }
+	 * 
+	 */
+	public PostalAddress6 getPstlAdr() {
+		return pstlAdr;
+	}
 
-    /**
-     * Sets the value of the pstlAdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PostalAddress6 }
-     *     
-     */
-    public void setPstlAdr(PostalAddress6 value) {
-        this.pstlAdr = value;
-    }
+	/**
+	 * Sets the value of the pstlAdr property.
+	 * 
+	 * @param value allowed object is {@link PostalAddress6 }
+	 * 
+	 */
+	public void setPstlAdr(PostalAddress6 value) {
+		this.pstlAdr = value;
+	}
+
+	@Override
+	public String toString() {
+		return "BranchData2 [id=" + id + ", nm=" + nm + ", pstlAdr=" + pstlAdr + "]";
+	}
 
 }

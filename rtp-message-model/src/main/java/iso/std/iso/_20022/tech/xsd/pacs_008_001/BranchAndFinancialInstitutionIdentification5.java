@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for BranchAndFinancialInstitutionIdentification5 complex type.
+ * <p>
+ * Java class for BranchAndFinancialInstitutionIdentification5 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="BranchAndFinancialInstitutionIdentification5">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BranchAndFinancialInstitutionIdentification5", propOrder = {
-    "finInstnId",
-    "brnchId"
-})
+@XmlType(name = "BranchAndFinancialInstitutionIdentification5", propOrder = { "finInstnId", "brnchId" })
 public class BranchAndFinancialInstitutionIdentification5 {
 
-    @XmlElement(name = "FinInstnId", required = true)
-    protected FinancialInstitutionIdentification8 finInstnId;
-    @XmlElement(name = "BrnchId")
-    protected BranchData2 brnchId;
+	@XmlElement(name = "FinInstnId", required = true)
+	protected FinancialInstitutionIdentification8 finInstnId;
+	@XmlElement(name = "BrnchId")
+	protected BranchData2 brnchId;
 
-    /**
-     * Gets the value of the finInstnId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FinancialInstitutionIdentification8 }
-     *     
-     */
-    public FinancialInstitutionIdentification8 getFinInstnId() {
-        return finInstnId;
-    }
+	/**
+	 * Gets the value of the finInstnId property.
+	 * 
+	 * @return possible object is {@link FinancialInstitutionIdentification8 }
+	 * 
+	 */
+	public FinancialInstitutionIdentification8 getFinInstnId() {
+		return finInstnId;
+	}
 
-    /**
-     * Sets the value of the finInstnId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FinancialInstitutionIdentification8 }
-     *     
-     */
-    public void setFinInstnId(FinancialInstitutionIdentification8 value) {
-        this.finInstnId = value;
-    }
+	/**
+	 * Sets the value of the finInstnId property.
+	 * 
+	 * @param value allowed object is {@link FinancialInstitutionIdentification8 }
+	 * 
+	 */
+	public void setFinInstnId(FinancialInstitutionIdentification8 value) {
+		this.finInstnId = value;
+	}
 
-    /**
-     * Gets the value of the brnchId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BranchData2 }
-     *     
-     */
-    public BranchData2 getBrnchId() {
-        return brnchId;
-    }
+	/**
+	 * Gets the value of the brnchId property.
+	 * 
+	 * @return possible object is {@link BranchData2 }
+	 * 
+	 */
+	public BranchData2 getBrnchId() {
+		return brnchId;
+	}
 
-    /**
-     * Sets the value of the brnchId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BranchData2 }
-     *     
-     */
-    public void setBrnchId(BranchData2 value) {
-        this.brnchId = value;
-    }
+	/**
+	 * Sets the value of the brnchId property.
+	 * 
+	 * @param value allowed object is {@link BranchData2 }
+	 * 
+	 */
+	public void setBrnchId(BranchData2 value) {
+		this.brnchId = value;
+	}
+
+	@Override
+	public String toString() {
+		return "BranchAndFinancialInstitutionIdentification5 [finInstnId=" + finInstnId + ", brnchId=" + brnchId + "]";
+	}
 
 }

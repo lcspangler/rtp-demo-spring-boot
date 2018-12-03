@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for SettlementDateTimeIndication1 complex type.
+ * <p>
+ * Java class for SettlementDateTimeIndication1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="SettlementDateTimeIndication1">
@@ -37,65 +38,59 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SettlementDateTimeIndication1", propOrder = {
-    "dbtDtTm",
-    "cdtDtTm"
-})
+@XmlType(name = "SettlementDateTimeIndication1", propOrder = { "dbtDtTm", "cdtDtTm" })
 public class SettlementDateTimeIndication1 {
 
-    @XmlElement(name = "DbtDtTm")
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dbtDtTm;
-    @XmlElement(name = "CdtDtTm")
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar cdtDtTm;
+	@XmlElement(name = "DbtDtTm")
+	@XmlSchemaType(name = "dateTime")
+	protected XMLGregorianCalendar dbtDtTm;
+	@XmlElement(name = "CdtDtTm")
+	@XmlSchemaType(name = "dateTime")
+	protected XMLGregorianCalendar cdtDtTm;
 
-    /**
-     * Gets the value of the dbtDtTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDbtDtTm() {
-        return dbtDtTm;
-    }
+	/**
+	 * Gets the value of the dbtDtTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getDbtDtTm() {
+		return dbtDtTm;
+	}
 
-    /**
-     * Sets the value of the dbtDtTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDbtDtTm(XMLGregorianCalendar value) {
-        this.dbtDtTm = value;
-    }
+	/**
+	 * Sets the value of the dbtDtTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setDbtDtTm(XMLGregorianCalendar value) {
+		this.dbtDtTm = value;
+	}
 
-    /**
-     * Gets the value of the cdtDtTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCdtDtTm() {
-        return cdtDtTm;
-    }
+	/**
+	 * Gets the value of the cdtDtTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getCdtDtTm() {
+		return cdtDtTm;
+	}
 
-    /**
-     * Sets the value of the cdtDtTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCdtDtTm(XMLGregorianCalendar value) {
-        this.cdtDtTm = value;
-    }
+	/**
+	 * Sets the value of the cdtDtTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setCdtDtTm(XMLGregorianCalendar value) {
+		this.cdtDtTm = value;
+	}
+
+	@Override
+	public String toString() {
+		return "SettlementDateTimeIndication1 [dbtDtTm=" + dbtDtTm + ", cdtDtTm=" + cdtDtTm + "]";
+	}
 
 }

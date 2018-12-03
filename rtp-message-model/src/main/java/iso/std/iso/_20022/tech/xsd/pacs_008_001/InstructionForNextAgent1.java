@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for InstructionForNextAgent1 complex type.
+ * <p>
+ * Java class for InstructionForNextAgent1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="InstructionForNextAgent1">
@@ -36,64 +37,58 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InstructionForNextAgent1", propOrder = {
-    "cd",
-    "instrInf"
-})
+@XmlType(name = "InstructionForNextAgent1", propOrder = { "cd", "instrInf" })
 public class InstructionForNextAgent1 {
 
-    @XmlElement(name = "Cd")
-    @XmlSchemaType(name = "string")
-    protected Instruction4Code cd;
-    @XmlElement(name = "InstrInf")
-    protected String instrInf;
+	@XmlElement(name = "Cd")
+	@XmlSchemaType(name = "string")
+	protected Instruction4Code cd;
+	@XmlElement(name = "InstrInf")
+	protected String instrInf;
 
-    /**
-     * Gets the value of the cd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Instruction4Code }
-     *     
-     */
-    public Instruction4Code getCd() {
-        return cd;
-    }
+	/**
+	 * Gets the value of the cd property.
+	 * 
+	 * @return possible object is {@link Instruction4Code }
+	 * 
+	 */
+	public Instruction4Code getCd() {
+		return cd;
+	}
 
-    /**
-     * Sets the value of the cd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Instruction4Code }
-     *     
-     */
-    public void setCd(Instruction4Code value) {
-        this.cd = value;
-    }
+	/**
+	 * Sets the value of the cd property.
+	 * 
+	 * @param value allowed object is {@link Instruction4Code }
+	 * 
+	 */
+	public void setCd(Instruction4Code value) {
+		this.cd = value;
+	}
 
-    /**
-     * Gets the value of the instrInf property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getInstrInf() {
-        return instrInf;
-    }
+	/**
+	 * Gets the value of the instrInf property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getInstrInf() {
+		return instrInf;
+	}
 
-    /**
-     * Sets the value of the instrInf property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setInstrInf(String value) {
-        this.instrInf = value;
-    }
+	/**
+	 * Sets the value of the instrInf property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setInstrInf(String value) {
+		this.instrInf = value;
+	}
+
+	@Override
+	public String toString() {
+		return "InstructionForNextAgent1 [cd=" + cd + ", instrInf=" + instrInf + "]";
+	}
 
 }

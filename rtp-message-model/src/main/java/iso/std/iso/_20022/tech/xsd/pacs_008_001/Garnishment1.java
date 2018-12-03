@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for Garnishment1 complex type.
+ * <p>
+ * Java class for Garnishment1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Garnishment1">
@@ -43,226 +44,193 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Garnishment1", propOrder = {
-    "tp",
-    "grnshee",
-    "grnshmtAdmstr",
-    "refNb",
-    "dt",
-    "rmtdAmt",
-    "fmlyMdclInsrncInd",
-    "mplyeeTermntnInd"
-})
+@XmlType(name = "Garnishment1", propOrder = { "tp", "grnshee", "grnshmtAdmstr", "refNb", "dt", "rmtdAmt",
+		"fmlyMdclInsrncInd", "mplyeeTermntnInd" })
 public class Garnishment1 {
 
-    @XmlElement(name = "Tp", required = true)
-    protected GarnishmentType1 tp;
-    @XmlElement(name = "Grnshee")
-    protected PartyIdentification43 grnshee;
-    @XmlElement(name = "GrnshmtAdmstr")
-    protected PartyIdentification43 grnshmtAdmstr;
-    @XmlElement(name = "RefNb")
-    protected String refNb;
-    @XmlElement(name = "Dt")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dt;
-    @XmlElement(name = "RmtdAmt")
-    protected ActiveOrHistoricCurrencyAndAmount rmtdAmt;
-    @XmlElement(name = "FmlyMdclInsrncInd")
-    protected Boolean fmlyMdclInsrncInd;
-    @XmlElement(name = "MplyeeTermntnInd")
-    protected Boolean mplyeeTermntnInd;
+	@XmlElement(name = "Tp", required = true)
+	protected GarnishmentType1 tp;
+	@XmlElement(name = "Grnshee")
+	protected PartyIdentification43 grnshee;
+	@XmlElement(name = "GrnshmtAdmstr")
+	protected PartyIdentification43 grnshmtAdmstr;
+	@XmlElement(name = "RefNb")
+	protected String refNb;
+	@XmlElement(name = "Dt")
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar dt;
+	@XmlElement(name = "RmtdAmt")
+	protected ActiveOrHistoricCurrencyAndAmount rmtdAmt;
+	@XmlElement(name = "FmlyMdclInsrncInd")
+	protected Boolean fmlyMdclInsrncInd;
+	@XmlElement(name = "MplyeeTermntnInd")
+	protected Boolean mplyeeTermntnInd;
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GarnishmentType1 }
-     *     
-     */
-    public GarnishmentType1 getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link GarnishmentType1 }
+	 * 
+	 */
+	public GarnishmentType1 getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GarnishmentType1 }
-     *     
-     */
-    public void setTp(GarnishmentType1 value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link GarnishmentType1 }
+	 * 
+	 */
+	public void setTp(GarnishmentType1 value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the grnshee property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public PartyIdentification43 getGrnshee() {
-        return grnshee;
-    }
+	/**
+	 * Gets the value of the grnshee property.
+	 * 
+	 * @return possible object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public PartyIdentification43 getGrnshee() {
+		return grnshee;
+	}
 
-    /**
-     * Sets the value of the grnshee property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public void setGrnshee(PartyIdentification43 value) {
-        this.grnshee = value;
-    }
+	/**
+	 * Sets the value of the grnshee property.
+	 * 
+	 * @param value allowed object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public void setGrnshee(PartyIdentification43 value) {
+		this.grnshee = value;
+	}
 
-    /**
-     * Gets the value of the grnshmtAdmstr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public PartyIdentification43 getGrnshmtAdmstr() {
-        return grnshmtAdmstr;
-    }
+	/**
+	 * Gets the value of the grnshmtAdmstr property.
+	 * 
+	 * @return possible object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public PartyIdentification43 getGrnshmtAdmstr() {
+		return grnshmtAdmstr;
+	}
 
-    /**
-     * Sets the value of the grnshmtAdmstr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public void setGrnshmtAdmstr(PartyIdentification43 value) {
-        this.grnshmtAdmstr = value;
-    }
+	/**
+	 * Sets the value of the grnshmtAdmstr property.
+	 * 
+	 * @param value allowed object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public void setGrnshmtAdmstr(PartyIdentification43 value) {
+		this.grnshmtAdmstr = value;
+	}
 
-    /**
-     * Gets the value of the refNb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRefNb() {
-        return refNb;
-    }
+	/**
+	 * Gets the value of the refNb property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getRefNb() {
+		return refNb;
+	}
 
-    /**
-     * Sets the value of the refNb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRefNb(String value) {
-        this.refNb = value;
-    }
+	/**
+	 * Sets the value of the refNb property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setRefNb(String value) {
+		this.refNb = value;
+	}
 
-    /**
-     * Gets the value of the dt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDt() {
-        return dt;
-    }
+	/**
+	 * Gets the value of the dt property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getDt() {
+		return dt;
+	}
 
-    /**
-     * Sets the value of the dt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDt(XMLGregorianCalendar value) {
-        this.dt = value;
-    }
+	/**
+	 * Sets the value of the dt property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setDt(XMLGregorianCalendar value) {
+		this.dt = value;
+	}
 
-    /**
-     * Gets the value of the rmtdAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getRmtdAmt() {
-        return rmtdAmt;
-    }
+	/**
+	 * Gets the value of the rmtdAmt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getRmtdAmt() {
+		return rmtdAmt;
+	}
 
-    /**
-     * Sets the value of the rmtdAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setRmtdAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.rmtdAmt = value;
-    }
+	/**
+	 * Sets the value of the rmtdAmt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setRmtdAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.rmtdAmt = value;
+	}
 
-    /**
-     * Gets the value of the fmlyMdclInsrncInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isFmlyMdclInsrncInd() {
-        return fmlyMdclInsrncInd;
-    }
+	/**
+	 * Gets the value of the fmlyMdclInsrncInd property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isFmlyMdclInsrncInd() {
+		return fmlyMdclInsrncInd;
+	}
 
-    /**
-     * Sets the value of the fmlyMdclInsrncInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setFmlyMdclInsrncInd(Boolean value) {
-        this.fmlyMdclInsrncInd = value;
-    }
+	/**
+	 * Sets the value of the fmlyMdclInsrncInd property.
+	 * 
+	 * @param value allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setFmlyMdclInsrncInd(Boolean value) {
+		this.fmlyMdclInsrncInd = value;
+	}
 
-    /**
-     * Gets the value of the mplyeeTermntnInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isMplyeeTermntnInd() {
-        return mplyeeTermntnInd;
-    }
+	/**
+	 * Gets the value of the mplyeeTermntnInd property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isMplyeeTermntnInd() {
+		return mplyeeTermntnInd;
+	}
 
-    /**
-     * Sets the value of the mplyeeTermntnInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setMplyeeTermntnInd(Boolean value) {
-        this.mplyeeTermntnInd = value;
-    }
+	/**
+	 * Sets the value of the mplyeeTermntnInd property.
+	 * 
+	 * @param value allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setMplyeeTermntnInd(Boolean value) {
+		this.mplyeeTermntnInd = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Garnishment1 [tp=" + tp + ", grnshee=" + grnshee + ", grnshmtAdmstr=" + grnshmtAdmstr + ", refNb="
+				+ refNb + ", dt=" + dt + ", rmtdAmt=" + rmtdAmt + ", fmlyMdclInsrncInd=" + fmlyMdclInsrncInd
+				+ ", mplyeeTermntnInd=" + mplyeeTermntnInd + "]";
+	}
 
 }

@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_008_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for SettlementTimeRequest2 complex type.
+ * <p>
+ * Java class for SettlementTimeRequest2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="SettlementTimeRequest2">
@@ -39,121 +40,106 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SettlementTimeRequest2", propOrder = {
-    "clsTm",
-    "tillTm",
-    "frTm",
-    "rjctTm"
-})
+@XmlType(name = "SettlementTimeRequest2", propOrder = { "clsTm", "tillTm", "frTm", "rjctTm" })
 public class SettlementTimeRequest2 {
 
-    @XmlElement(name = "CLSTm")
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar clsTm;
-    @XmlElement(name = "TillTm")
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar tillTm;
-    @XmlElement(name = "FrTm")
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar frTm;
-    @XmlElement(name = "RjctTm")
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar rjctTm;
+	@XmlElement(name = "CLSTm")
+	@XmlSchemaType(name = "time")
+	protected XMLGregorianCalendar clsTm;
+	@XmlElement(name = "TillTm")
+	@XmlSchemaType(name = "time")
+	protected XMLGregorianCalendar tillTm;
+	@XmlElement(name = "FrTm")
+	@XmlSchemaType(name = "time")
+	protected XMLGregorianCalendar frTm;
+	@XmlElement(name = "RjctTm")
+	@XmlSchemaType(name = "time")
+	protected XMLGregorianCalendar rjctTm;
 
-    /**
-     * Gets the value of the clsTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCLSTm() {
-        return clsTm;
-    }
+	/**
+	 * Gets the value of the clsTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getCLSTm() {
+		return clsTm;
+	}
 
-    /**
-     * Sets the value of the clsTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCLSTm(XMLGregorianCalendar value) {
-        this.clsTm = value;
-    }
+	/**
+	 * Sets the value of the clsTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setCLSTm(XMLGregorianCalendar value) {
+		this.clsTm = value;
+	}
 
-    /**
-     * Gets the value of the tillTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getTillTm() {
-        return tillTm;
-    }
+	/**
+	 * Gets the value of the tillTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getTillTm() {
+		return tillTm;
+	}
 
-    /**
-     * Sets the value of the tillTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setTillTm(XMLGregorianCalendar value) {
-        this.tillTm = value;
-    }
+	/**
+	 * Sets the value of the tillTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setTillTm(XMLGregorianCalendar value) {
+		this.tillTm = value;
+	}
 
-    /**
-     * Gets the value of the frTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFrTm() {
-        return frTm;
-    }
+	/**
+	 * Gets the value of the frTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getFrTm() {
+		return frTm;
+	}
 
-    /**
-     * Sets the value of the frTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFrTm(XMLGregorianCalendar value) {
-        this.frTm = value;
-    }
+	/**
+	 * Sets the value of the frTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setFrTm(XMLGregorianCalendar value) {
+		this.frTm = value;
+	}
 
-    /**
-     * Gets the value of the rjctTm property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getRjctTm() {
-        return rjctTm;
-    }
+	/**
+	 * Gets the value of the rjctTm property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getRjctTm() {
+		return rjctTm;
+	}
 
-    /**
-     * Sets the value of the rjctTm property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setRjctTm(XMLGregorianCalendar value) {
-        this.rjctTm = value;
-    }
+	/**
+	 * Sets the value of the rjctTm property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setRjctTm(XMLGregorianCalendar value) {
+		this.rjctTm = value;
+	}
+
+	@Override
+	public String toString() {
+		return "SettlementTimeRequest2 [clsTm=" + clsTm + ", tillTm=" + tillTm + ", frTm=" + frTm + ", rjctTm=" + rjctTm
+				+ "]";
+	}
 
 }
