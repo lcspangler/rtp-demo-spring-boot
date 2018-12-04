@@ -64,6 +64,11 @@
 			<artifactId>camel-stream</artifactId>
 		</dependency>
     
+    
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>spring-cloud-kubernetes-core</artifactId>
+    </dependency>
 
     <!-- Enabling health checks -->
     <dependency>

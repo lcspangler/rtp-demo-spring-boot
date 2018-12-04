@@ -33,7 +33,6 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 			kafka.setBrokers(kafkaBootstrap);
 		}
 		this.getContext().addComponent("kafka", kafka);
-		LOG.debug("Camel Components: " + this.getContext().getComponentNames());
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup

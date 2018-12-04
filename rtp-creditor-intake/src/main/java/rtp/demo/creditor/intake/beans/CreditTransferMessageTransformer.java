@@ -15,7 +15,9 @@ public class CreditTransferMessageTransformer {
 		creditTransferMessage.setCreditTransferMessageId(groupHeader70.getMsgId());
 		creditTransferMessage.setCreationDateTime(RtpDomainUtils.toLocalDateTime(groupHeader70.getCreDtTm()));
 
-		creditTransferMessage.setNumberOfTransactions(Integer.parseInt(groupHeader70.getNbOfTxs()));
+		if (groupHeader70.getNbOfTxs() != null) {
+			creditTransferMessage.setNumberOfTransactions(Integer.parseInt(groupHeader70.getNbOfTxs()));
+		}
 		creditTransferMessage.setSettlementMethod(groupHeader70.getSttlmInf().getSttlmMtd().toString());
 
 		creditTransferMessage.setPaymentAmount(groupHeader70.getTtlIntrBkSttlmAmt().getValue());
@@ -27,7 +29,7 @@ public class CreditTransferMessageTransformer {
 		if (rtpCreditTransferMessage.getCdtTrfTxInf().size() > 0) {
 			CreditTransferTransaction25 creditTransferTransaction25 = rtpCreditTransferMessage.getCdtTrfTxInf().get(0);
 			creditTransferMessage.setEndToEndId(creditTransferTransaction25.getPmtId().getEndToEndId());
-			creditTransferMessage.setPaymentInstructionId(creditTransferTransaction25.getPmtId().getTxId());
+			creditTransferMessage.setPaymentInstructionId(creditTransferTransaction25.getPmtId().getInstrId());
 			creditTransferMessage
 					.setDebtorAccountNumber(creditTransferTransaction25.getDbtrAcct().getId().getOthr().getId());
 			creditTransferMessage
