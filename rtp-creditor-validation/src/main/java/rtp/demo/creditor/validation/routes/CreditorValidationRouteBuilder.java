@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import rtp.demo.creditor.validation.beans.CreditTransferMessageValidationBean;
+
 @Component
 public class CreditorValidationRouteBuilder extends RouteBuilder {
 
@@ -37,6 +39,7 @@ public class CreditorValidationRouteBuilder extends RouteBuilder {
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
 				+ "&valueDeserializer=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageDeserializer")
 						.routeId("FromKafka").log("\n/// Creditor Validation Route >>> ${body}").log(">>> ${body}")
+						.bean(CreditTransferMessageValidationBean.class, "validateCreditTransferMessage")
 						.to("kafka:creditor-post-validation?serializerClass=rtp.demo.creditor.validation.serde.PaymentValidationRequestSerializer");
 	}
 

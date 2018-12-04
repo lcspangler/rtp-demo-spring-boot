@@ -33,7 +33,7 @@ public class CreditTransferMessageValidationBean {
 
 		List<Object> facts = new ArrayList<Object>();
 		facts.add(creditor);
-		facts.add(processingDateTime);
+		// facts.add(processingDateTime);
 		facts.add(makeDummyAccounts());
 		facts.add(validationRequest);
 
@@ -48,6 +48,8 @@ public class CreditTransferMessageValidationBean {
 		Account account1 = new Account();
 		account1.setAccountNumber("12000194212199001");
 		account1.setStatus(AccountStatus.OPEN);
+
+		accounts.getAccounts().add(account1);
 
 		return accounts;
 	}
