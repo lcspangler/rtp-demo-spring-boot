@@ -93,16 +93,28 @@ $ oc apply -f kafka/creditor-post-validation.yaml -n kafka-cluster
 Confirm on each Kafka broker that the topics were replicated.
 ```
 $ oc exec -it my-cluster-kafka-0 -c kafka -- bin/kafka-topics.sh --zookeeper localhost:2181 --list
-my-topic-1
-my-topic-2
+creditor-acks
+creditor-ctms
+creditor-post-validation
+creditor-pre-validation
 ```
 ```
 $ oc exec -it my-cluster-kafka-1 -c kafka -- bin/kafka-topics.sh --zookeeper localhost:2181 --list
-my-topic-1
-my-topic-2
+creditor-acks
+creditor-ctms
+creditor-post-validation
+creditor-pre-validation
 ```
 ```
 $ oc exec -it my-cluster-kafka-2 -c kafka -- bin/kafka-topics.sh --zookeeper localhost:2181 --list
-my-topic-1
-my-topic-2
+creditor-acks
+creditor-ctms
+creditor-post-validation
+creditor-pre-validation
 ```
+
+
+```
+$ mvn fabric8:deploy -Popenshift
+```
+

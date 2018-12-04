@@ -48,8 +48,9 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 		}
 		this.getContext().addComponent("kafka", kafka);
 
-		from("timer://foo?period=10000").setBody().constant(makeDummyRtpCreditTransferMessage()).log(">>> ${body}").to(
-				"kafka:my-topic-1?serializerClass=rtp.message.model.serde.FIToFICustomerCreditTransferV06Serializer");
+		from("timer://foo?period=10000").setBody().constant(makeDummyRtpCreditTransferMessage())
+				.log("\\n/// Mock RTP - Sending Credit Transfer Message >>> ${body}")
+				.to("kafka:creditor-ctms?serializerClass=rtp.message.model.serde.FIToFICustomerCreditTransferV06Serializer");
 	}
 
 	public String getKafkaBootstrap() {

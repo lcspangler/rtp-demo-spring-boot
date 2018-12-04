@@ -39,7 +39,8 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
 				+ "&valueDeserializer=rtp.message.model.serde.FIToFICustomerCreditTransferV06Deserializer")
 						.routeId("FromKafka").log("\n/// Creditor Intake Route >>> ${body}")
-						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}");
+						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}")
+						.to("kafka:creditor-pre-validation?serializerClass=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageSerializer");
 	}
 
 	public String getKafkaBootstrap() {
