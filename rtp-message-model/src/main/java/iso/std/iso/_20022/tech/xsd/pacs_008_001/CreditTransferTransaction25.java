@@ -187,7 +187,11 @@ public class CreditTransferTransaction25 {
 	 * 
 	 */
 	public PaymentIdentification3 getPmtId() {
-		return pmtId;
+		if (pmtId == null) {
+			return new PaymentIdentification3();
+		} else {
+			return pmtId;
+		}
 	}
 
 	/**
@@ -227,7 +231,11 @@ public class CreditTransferTransaction25 {
 	 * 
 	 */
 	public ActiveCurrencyAndAmount getIntrBkSttlmAmt() {
-		return intrBkSttlmAmt;
+		if (intrBkSttlmAmt == null) {
+			return new ActiveCurrencyAndAmount();
+		} else {
+			return intrBkSttlmAmt;
+		}
 	}
 
 	/**
@@ -728,7 +736,11 @@ public class CreditTransferTransaction25 {
 	 * 
 	 */
 	public CashAccount24 getDbtrAcct() {
-		return dbtrAcct;
+		if (dbtrAcct == null) {
+			return new CashAccount24();
+		} else {
+			return dbtrAcct;
+		}
 	}
 
 	/**
@@ -852,7 +864,11 @@ public class CreditTransferTransaction25 {
 	 * 
 	 */
 	public CashAccount24 getCdtrAcct() {
-		return cdtrAcct;
+		if (cdtrAcct == null) {
+			return new CashAccount24();
+		} else {
+			return cdtrAcct;
+		}
 	}
 
 	/**

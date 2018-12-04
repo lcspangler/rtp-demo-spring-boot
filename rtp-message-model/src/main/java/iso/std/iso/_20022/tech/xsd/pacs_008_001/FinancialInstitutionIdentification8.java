@@ -80,7 +80,11 @@ public class FinancialInstitutionIdentification8 {
 	 * 
 	 */
 	public ClearingSystemMemberIdentification2 getClrSysMmbId() {
-		return clrSysMmbId;
+		if (clrSysMmbId == null) {
+			return new ClearingSystemMemberIdentification2();
+		} else {
+			return clrSysMmbId;
+		}
 	}
 
 	/**

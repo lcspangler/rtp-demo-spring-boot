@@ -185,7 +185,11 @@ public class GroupHeader70 {
 	 * 
 	 */
 	public ActiveCurrencyAndAmount getTtlIntrBkSttlmAmt() {
-		return ttlIntrBkSttlmAmt;
+		if (ttlIntrBkSttlmAmt == null) {
+			return new ActiveCurrencyAndAmount();
+		} else {
+			return ttlIntrBkSttlmAmt;
+		}
 	}
 
 	/**
@@ -225,7 +229,11 @@ public class GroupHeader70 {
 	 * 
 	 */
 	public SettlementInstruction4 getSttlmInf() {
-		return sttlmInf;
+		if (sttlmInf == null) {
+			return new SettlementInstruction4();
+		} else {
+			return sttlmInf;
+		}
 	}
 
 	/**
@@ -266,7 +274,11 @@ public class GroupHeader70 {
 	 * 
 	 */
 	public BranchAndFinancialInstitutionIdentification5 getInstgAgt() {
-		return instgAgt;
+		if (instgAgt == null) {
+			return new BranchAndFinancialInstitutionIdentification5();
+		} else {
+			return instgAgt;
+		}
 	}
 
 	/**
@@ -288,7 +300,11 @@ public class GroupHeader70 {
 	 * 
 	 */
 	public BranchAndFinancialInstitutionIdentification5 getInstdAgt() {
-		return instdAgt;
+		if (instdAgt == null) {
+			return new BranchAndFinancialInstitutionIdentification5();
+		} else {
+			return instdAgt;
+		}
 	}
 
 	/**

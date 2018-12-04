@@ -51,7 +51,11 @@ public class BranchAndFinancialInstitutionIdentification5 {
 	 * 
 	 */
 	public FinancialInstitutionIdentification8 getFinInstnId() {
-		return finInstnId;
+		if (finInstnId == null) {
+			return new FinancialInstitutionIdentification8();
+		} else {
+			return finInstnId;
+		}
 	}
 
 	/**

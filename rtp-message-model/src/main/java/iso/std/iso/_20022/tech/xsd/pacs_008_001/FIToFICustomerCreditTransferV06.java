@@ -57,7 +57,11 @@ public class FIToFICustomerCreditTransferV06 {
 	 * 
 	 */
 	public GroupHeader70 getGrpHdr() {
-		return grpHdr;
+		if (grpHdr == null) {
+			return new GroupHeader70();
+		} else {
+			return grpHdr;
+		}
 	}
 
 	/**

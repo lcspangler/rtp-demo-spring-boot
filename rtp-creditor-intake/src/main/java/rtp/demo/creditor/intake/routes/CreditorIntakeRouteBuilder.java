@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import rtp.demo.creditor.intake.beans.CreditTransferMessageTransformer;
+
 @Component
 public class CreditorIntakeRouteBuilder extends RouteBuilder {
 
@@ -36,7 +38,8 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
 				+ "&valueDeserializer=rtp.message.model.serde.FIToFICustomerCreditTransferV06Deserializer")
-						.routeId("FromKafka").log("${body}");// .bean(beanType, method);
+						.routeId("FromKafka").log(">>> ${body}")
+						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}");
 	}
 
 	public String getKafkaBootstrap() {
