@@ -42,7 +42,7 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 		KafkaComponent kafka = new KafkaComponent();
 		if (kafkaBootstrap == null) {
 			LOG.info("null boostrap");
-			kafka.setBrokers("172.30.123.84:9092");
+			kafka.setBrokers("172.30.27.66:9092");
 		} else {
 			kafka.setBrokers(kafkaBootstrap);
 		}

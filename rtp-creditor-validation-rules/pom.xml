@@ -26,7 +26,7 @@
       <version>1.0.0.0</version>    
     </dependency>
     
-    <dependency>
+  <dependency>
     <groupId>org.drools</groupId>
     <artifactId>drools-compiler</artifactId>
     <version>${drools.version}</version>

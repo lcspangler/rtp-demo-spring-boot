@@ -118,3 +118,23 @@ creditor-pre-validation
 $ mvn fabric8:deploy -Popenshift
 ```
 
+
+
+
+oc create configmap rtp-creditor-intake-config \
+            --from-literal=BOOTSTRAP_SERVERS="${bootstrap}" \
+            --from-literal=CONSUMER_TOPIC=creditor-ctms \
+            --from-literal=GROUP_ID=rtp-creditor-intake-app \
+            --from-literal=SECURITY_PROTOCOL=PLAINTEXT \
+            --from-literal=AUTO_OFFSET_RESET=earliest \
+            --from-literal=ENABLE_AUTO_COMMIT=true
+
+
+oc create configmap rtp-creditor-validation-config \
+            --from-literal=BOOTSTRAP_SERVERS="${bootstrap}" \
+            --from-literal=CONSUMER_TOPIC=creditor-pre-validation \
+            --from-literal=GROUP_ID=rtp-creditor-validation-app \
+            --from-literal=SECURITY_PROTOCOL=PLAINTEXT \
+            --from-literal=AUTO_OFFSET_RESET=earliest \
+            --from-literal=ENABLE_AUTO_COMMIT=true
+

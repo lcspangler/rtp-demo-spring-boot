@@ -1,4 +1,4 @@
-package rtp.demo.creditor.intake.routes;
+package rtp.demo.creditor.validation.routes;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaComponent;
@@ -6,18 +6,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import rtp.demo.creditor.intake.beans.CreditTransferMessageTransformer;
-
 @Component
-public class CreditorIntakeRouteBuilder extends RouteBuilder {
+public class CreditorValidationRouteBuilder extends RouteBuilder {
 
-	private static final Logger LOG = LoggerFactory.getLogger(CreditorIntakeRouteBuilder.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CreditorValidationRouteBuilder.class);
 
 	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
 	// private String kafkaConsumerTopic = System.getenv("CONSUMER_TOPIC");
 
-	private String kafkaConsumerTopic = "creditor-ctms";
-	private String consumerGroup = "rtp-creditor-intake-app";
+	private String kafkaConsumerTopic = "creditor-pre-validation";
+	private String consumerGroup = "rtp-creditor-validation-app";
 	private String consumerMaxPollRecords = "5000";
 	private String consumerCount = "1";
 	private String consumerSeekTo = "beginning";
@@ -37,10 +35,9 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
-				+ "&valueDeserializer=rtp.message.model.serde.FIToFICustomerCreditTransferV06Deserializer")
-						.routeId("FromKafka").log("\n/// Creditor Intake Route >>> ${body}")
-						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}")
-						.to("kafka:creditor-pre-validation?serializerClass=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageSerializer");
+				+ "&valueDeserializer=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageDeserializer")
+						.routeId("FromKafka").log("\n/// Creditor Validation Route >>> ${body}").log(">>> ${body}")
+						.to("kafka:creditor-post-validation?serializerClass=rtp.demo.creditor.validation.serde.PaymentValidationRequestSerializer");
 	}
 
 	public String getKafkaBootstrap() {

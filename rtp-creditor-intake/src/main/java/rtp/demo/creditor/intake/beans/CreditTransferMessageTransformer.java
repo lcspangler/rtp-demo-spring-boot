@@ -4,7 +4,6 @@ import iso.std.iso._20022.tech.xsd.pacs_008_001.CreditTransferTransaction25;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.FIToFICustomerCreditTransferV06;
 import iso.std.iso._20022.tech.xsd.pacs_008_001.GroupHeader70;
 import rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessage;
-import rtp.demo.creditor.domain.util.RtpDomainUtils;
 
 public class CreditTransferMessageTransformer {
 
@@ -13,7 +12,7 @@ public class CreditTransferMessageTransformer {
 		GroupHeader70 groupHeader70 = rtpCreditTransferMessage.getGrpHdr();
 
 		creditTransferMessage.setCreditTransferMessageId(groupHeader70.getMsgId());
-		creditTransferMessage.setCreationDateTime(RtpDomainUtils.toLocalDateTime(groupHeader70.getCreDtTm()));
+		// creditTransferMessage.setCreationDateTime(RtpDomainUtils.toLocalDateTime(groupHeader70.getCreDtTm()));
 
 		if (groupHeader70.getNbOfTxs() != null) {
 			creditTransferMessage.setNumberOfTransactions(Integer.parseInt(groupHeader70.getNbOfTxs()));
