@@ -14,9 +14,10 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 	private static final Logger LOG = LoggerFactory.getLogger(CreditorIntakeRouteBuilder.class);
 
 	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
-	private String kafkaConsumerTopic = System.getenv("CONSUMER_TOPIC");
+	// private String kafkaConsumerTopic = System.getenv("CONSUMER_TOPIC");
 
-	private String consumerGroup = "my-group";
+	private String kafkaConsumerTopic = "creditor-ctms";
+	private String consumerGroup = "rtp-creditor-intake-app";
 	private String consumerMaxPollRecords = "5000";
 	private String consumerCount = "1";
 	private String consumerSeekTo = "beginning";
@@ -37,7 +38,7 @@ public class CreditorIntakeRouteBuilder extends RouteBuilder {
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
 				+ "&valueDeserializer=rtp.message.model.serde.FIToFICustomerCreditTransferV06Deserializer")
-						.routeId("FromKafka").log(">>> ${body}")
+						.routeId("FromKafka").log("\n/// Creditor Intake Route >>> ${body}")
 						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}");
 	}
 

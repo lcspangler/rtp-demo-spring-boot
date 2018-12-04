@@ -32,7 +32,8 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 	private static final Logger LOG = LoggerFactory.getLogger(MockRtpRouteBuilder.class);
 
 	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
-	private String kafkaProducerTopic = System.getenv("PRODUCER_TOPIC");
+	// private String kafkaProducerTopic = System.getenv("PRODUCER_TOPIC");
+	private String kafkaProducerTopic = "creditor-ctms";
 
 	@Override
 	public void configure() throws Exception {
