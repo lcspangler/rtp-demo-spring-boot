@@ -12,9 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- configure the Fuse version you want to use here -->
     <fuse.version>7.1.0.fuse-710019-redhat-00002</fuse.version>
-    <camel.version>2.23.0</camel.version>
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     <drools.version>7.7.0.Final-redhat-8</drools.version>
@@ -53,12 +51,18 @@
       <artifactId>rtp-message-model</artifactId>
       <version>1.0.0.0</version>    
     </dependency>
-    
+
     <dependency>
       <groupId>rtp.demo</groupId>
       <artifactId>rtp-creditor-validation-rules</artifactId>
       <version>1.0.0.0</version>    
     </dependency>
+    
+<dependency>
+    <groupId>org.kie</groupId>
+    <artifactId>kie-ci</artifactId>
+    <version>${kie.version}</version>
+</dependency>
     
   <dependency>
     <groupId>org.drools</groupId>

@@ -14,10 +14,9 @@ import java.math.BigDecimal;
 dialect "java"
 
 
-
 rule "RTP_CBPV_002 - Validate Credit Transfer Message Number of Transactions"
   when
-	$pvr : PaymentValidationRequest( creditTransferMessage.numberOfTransactions != 1 ) 
+	$pvr : PaymentValidationRequest( creditTransferMessage.numberOfTransactions != 1 )
 	not PaymentValidationError( errorCode == "CPVE_002" ) from $pvr.errors
   then
     modify( $pvr ) { getErrors().add( new PaymentValidationError( "CPVE_002", "650", "Number of transactions on message was not one" )) }
@@ -26,7 +25,7 @@ end
 
 rule "RTP_CBPV_003 - Validate Credit Transfer Message Payment Amount"
   when
-	$pvr : PaymentValidationRequest( (creditTransferMessage.paymentAmount.compareTo( new BigDecimal("0.00")) > 0 ) == false ) 
+	$pvr : PaymentValidationRequest( (creditTransferMessage.paymentAmount.compareTo( new BigDecimal("0.00")) > 0 ) == false )
 	not PaymentValidationError( errorCode == "CPVE_003" ) from $pvr.errors
   then
     modify( $pvr ) { getErrors().add( new PaymentValidationError( "CPVE_003", "650", "Payment amount less than or equal to zero" )) }
@@ -35,7 +34,7 @@ end
 
 rule "RTP_CBPV_004 - Validate Credit Transfer Message Payment Currency"
   when
-	$pvr : PaymentValidationRequest( creditTransferMessage.paymentCurrency != "USD" ) 
+	$pvr : PaymentValidationRequest( creditTransferMessage.paymentCurrency != "USD" )
 	not PaymentValidationError( errorCode == "CPVE_004" ) from $pvr.errors
   then
     modify( $pvr ) { getErrors().add( new PaymentValidationError( "CPVE_004", "650", "Payment currency code is not valid" )) }
@@ -45,7 +44,7 @@ end
 rule "RTP_CBPV_005 - Validate Credit Transfer Message Creditor"
   when
     CreditorBank( $rtn : routingAndTransitNumber )
-	$pvr : PaymentValidationRequest( creditTransferMessage.creditorId != $rtn ) 
+	$pvr : PaymentValidationRequest( creditTransferMessage.creditorId != $rtn )
 	not PaymentValidationError( errorCode == "CPVE_005" ) from $pvr.errors
   then
     modify( $pvr ) { getErrors().add( new PaymentValidationError( "CPVE_005", "BE17", "Creditor identification is not valid" )) }
@@ -55,7 +54,7 @@ end
 rule "RTP_CBPV_006 - Validate Credit Transfer Message Payment Account Exists"
   when
   	$accts : Accounts()
-	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber ) 
+	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber )
 	not Account( accountNumber == $payAcct ) from $accts.accounts
 	not PaymentValidationError( errorCode == "CPVE_006" ) from $pvr.errors
   then
@@ -66,7 +65,7 @@ end
 rule "RTP_CBPV_007 - Validate Credit Transfer Message Payment Account Is Not Closed"
   when
   	$accts : Accounts()
-	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber ) 
+	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber )
 	Account( accountNumber == $payAcct, status == AccountStatus.fromString("CLOSED") ) from $accts.accounts
 	not PaymentValidationError( errorCode == "CPVE_007" ) from $pvr.errors
   then
@@ -77,7 +76,7 @@ end
 rule "RTP_CBPV_008 - Validate Credit Transfer Message Payment Account Is Not Blocked"
   when
   	$accts : Accounts()
-	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber ) 
+	$pvr : PaymentValidationRequest( $payAcct : creditTransferMessage.creditorAccountNumber )
 	Account( accountNumber == $payAcct, status == AccountStatus.fromString("BLOCKED") ) from $accts.accounts
 	not PaymentValidationError( errorCode == "CPVE_008" ) from $pvr.errors
   then
@@ -87,7 +86,7 @@ end
 
 rule "RTP_CBPV_009 - Validate Credit Transfer Message Settlement Method"
   when
-	$pvr : PaymentValidationRequest( creditTransferMessage.settlementMethod != "CLRG" ) 
+	$pvr : PaymentValidationRequest( creditTransferMessage.settlementMethod != "CLRG" )
 	not PaymentValidationError( errorCode == "CPVE_009" ) from $pvr.errors
   then
     modify( $pvr ) { getErrors().add( new PaymentValidationError( "CPVE_009", "650", "Settlement method is invalid" )) }
@@ -100,4 +99,3 @@ end
 //  when
 //  then
 //end
-
