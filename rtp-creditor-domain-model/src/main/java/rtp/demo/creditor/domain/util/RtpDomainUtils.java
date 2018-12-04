@@ -7,7 +7,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class RtpDomainUtils {
 
 	public static LocalDateTime toLocalDateTime(XMLGregorianCalendar xmlGregorianCalendar) {
-		return null;
+		return xmlGregorianCalendar.toGregorianCalendar().toZonedDateTime().toLocalDateTime();
 	}
 
 }

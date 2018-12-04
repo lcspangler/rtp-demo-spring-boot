@@ -144,7 +144,11 @@ public class FinancialInstitutionIdentification8 {
 	 * 
 	 */
 	public GenericFinancialIdentification1 getOthr() {
-		return othr;
+		if (othr == null) {
+			return new GenericFinancialIdentification1();
+		} else {
+			return othr;
+		}
 	}
 
 	/**
