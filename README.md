@@ -16,10 +16,12 @@
 
 ![creditor_demo](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/rtp-creditor-demo.png)
 
-Services are deployed to OpenShift (OKD) and Kafka cluster is using Strimzi.
-Camel consumes and writes from/to Kafka topics.
-Camel routes are deployed and run as Spring Boot jars.
-Decision manager rules are run in a stateless session as embedded DRL.
+Technology summary:
+- Deployed to OpenShift (OKD)
+- Kafka cluster is Strimzi
+- Camel component is used to consume and writes from/to Kafka topics.
+- Camel routes are deployed and run as Spring Boot jars
+- Decision manager rules are run in a stateless session as embedded DRL
 
  **1. Mock RTP route**
 - Generates RTP FIToFICustomerCreditTransferV06 messages on a timer
@@ -45,9 +47,9 @@ Decision manager rules are run in a stateless session as embedded DRL.
 **7. Creditor Acknowledgement route**
 - Consumes from creditor-post-validation
 - Transforms Payment to FIToFIPaymentStatusReportV07
-- Writes to rtp-creditor-acks topic
+- Writes to creditor-acks topic
 
-**8.Mock RTP receives acknowledgement messages** 
+**8.Mock RTP receives acknowledgement messages**
 
 
 

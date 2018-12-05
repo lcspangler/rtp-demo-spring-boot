@@ -31,26 +31,35 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 	private static final Logger LOG = LoggerFactory.getLogger(MockRtpRouteBuilder.class);
 
-	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
+	// private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
 	// private String kafkaProducerTopic = System.getenv("PRODUCER_TOPIC");
+	private String kafkaBootstrap = "172.30.27.66:9092";
 	private String kafkaProducerTopic = "creditor-ctms";
+
+	private String kafkaConsumerTopic = "creditor-acks";
+	private String consumerGroup = "rtp-mock-app";
+	private String consumerMaxPollRecords = "5000";
+	private String consumerCount = "1";
+	private String consumerSeekTo = "beginning";
 
 	@Override
 	public void configure() throws Exception {
 		LOG.info("Configuring Mock RTP Routes");
 
 		KafkaComponent kafka = new KafkaComponent();
-		if (kafkaBootstrap == null) {
-			LOG.info("null boostrap");
-			kafka.setBrokers("172.30.27.66:9092");
-		} else {
-			kafka.setBrokers(kafkaBootstrap);
-		}
+		kafka.setBrokers(kafkaBootstrap);
+
 		this.getContext().addComponent("kafka", kafka);
 
 		from("timer://foo?period=10000").setBody().constant(makeDummyRtpCreditTransferMessage())
 				.log("\\n/// Mock RTP - Sending Credit Transfer Message >>> ${body}")
 				.to("kafka:creditor-ctms?serializerClass=rtp.message.model.serde.FIToFICustomerCreditTransferV06Serializer");
+
+		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
+				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
+				+ "&valueDeserializer=rtp.message.model.serde.FIToFIPaymentStatusReportV07Deserializer")
+						.routeId("FromKafka").log("\n/// Mock RTP - Receiving Acknowledgements >>> ${body}");
+
 	}
 
 	public String getKafkaBootstrap() {
@@ -67,6 +76,46 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 
 	public void setKafkaProducerTopic(String kafkaProducerTopic) {
 		this.kafkaProducerTopic = kafkaProducerTopic;
+	}
+
+	public String getKafkaConsumerTopic() {
+		return kafkaConsumerTopic;
+	}
+
+	public void setKafkaConsumerTopic(String kafkaConsumerTopic) {
+		this.kafkaConsumerTopic = kafkaConsumerTopic;
+	}
+
+	public String getConsumerGroup() {
+		return consumerGroup;
+	}
+
+	public void setConsumerGroup(String consumerGroup) {
+		this.consumerGroup = consumerGroup;
+	}
+
+	public String getConsumerMaxPollRecords() {
+		return consumerMaxPollRecords;
+	}
+
+	public void setConsumerMaxPollRecords(String consumerMaxPollRecords) {
+		this.consumerMaxPollRecords = consumerMaxPollRecords;
+	}
+
+	public String getConsumerCount() {
+		return consumerCount;
+	}
+
+	public void setConsumerCount(String consumerCount) {
+		this.consumerCount = consumerCount;
+	}
+
+	public String getConsumerSeekTo() {
+		return consumerSeekTo;
+	}
+
+	public void setConsumerSeekTo(String consumerSeekTo) {
+		this.consumerSeekTo = consumerSeekTo;
 	}
 
 	private FIToFICustomerCreditTransferV06 makeDummyRtpCreditTransferMessage() throws DatatypeConfigurationException {
