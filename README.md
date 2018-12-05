@@ -153,3 +153,12 @@ oc create configmap rtp-creditor-validation-config \
             --from-literal=SECURITY_PROTOCOL=PLAINTEXT \
             --from-literal=AUTO_OFFSET_RESET=earliest \
             --from-literal=ENABLE_AUTO_COMMIT=true
+
+
+oc create configmap rtp-creditor-acknowledgement-config \
+                        --from-literal=BOOTSTRAP_SERVERS="${bootstrap}" \
+                        --from-literal=CONSUMER_TOPIC=creditor-post-validation \
+                        --from-literal=GROUP_ID=rtp-creditor-acknowledgement-app \
+                        --from-literal=SECURITY_PROTOCOL=PLAINTEXT \
+                        --from-literal=AUTO_OFFSET_RESET=earliest \
+                        --from-literal=ENABLE_AUTO_COMMIT=true
