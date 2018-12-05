@@ -40,7 +40,7 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 	private String consumerGroup = "rtp-mock-app";
 	private String consumerMaxPollRecords = "5000";
 	private String consumerCount = "1";
-	private String consumerSeekTo = "beginning";
+	private String consumerSeekTo = "end";
 
 	@Override
 	public void configure() throws Exception {
