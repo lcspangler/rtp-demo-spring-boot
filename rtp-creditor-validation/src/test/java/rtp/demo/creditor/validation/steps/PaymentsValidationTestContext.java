@@ -30,9 +30,7 @@ public class PaymentsValidationTestContext {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks.getKieClasspathContainer();
 
-		// StatelessKieSession kSession =
-		// kContainer.newStatelessKieSession("payments-validation-ksession");
-		StatelessKieSession kSession = kContainer.newStatelessKieSession();
+		StatelessKieSession kSession = kContainer.newStatelessKieSession("payments-validation-ksession");
 
 		List<Object> facts = new ArrayList<Object>();
 		facts.add(creditor);

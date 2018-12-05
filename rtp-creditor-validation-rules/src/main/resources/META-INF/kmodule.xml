@@ -1,5 +1,4 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule">
-  <kbase name="payments-validation-kbase"  default="true" eventProcessingMode="cloud" packages="rtp.creditor.validation.rules">
-    <ksession name="payments-validation-ksession" type="stateless" default="true" />
-  </kbase>
-</kmodule>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule"> </kmodule>
+
+  
+

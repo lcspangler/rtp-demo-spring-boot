@@ -33,17 +33,13 @@ public class CreditTransferMessageValidationBean {
 
 	public PaymentValidationRequest validateCreditTransferMessage(CreditTransferMessage creditTransferMessage) {
 		LOG.info("Validation Rules");
-
 		PaymentValidationRequest validationRequest = new PaymentValidationRequest();
-		CreditorBank creditor = new CreditorBank();
-		creditor.setRoutingAndTransitNumber("020010001");
-
 		validationRequest.setCreditTransferMessage(creditTransferMessage);
 
 		StatelessKieSession kSession = kieContainer.newStatelessKieSession("payments-validation-ksession");
 
 		List<Object> facts = new ArrayList<Object>();
-		facts.add(creditor);
+		facts.add(makeDummyCreditor());
 		// facts.add(processingDateTime);
 		facts.add(makeDummyAccounts());
 		facts.add(validationRequest);
@@ -61,10 +57,16 @@ public class CreditTransferMessageValidationBean {
 		Account account1 = new Account();
 		account1.setAccountNumber("12000194212199001");
 		account1.setStatus(AccountStatus.OPEN);
-
 		accounts.getAccounts().add(account1);
 
 		return accounts;
+	}
+
+	private CreditorBank makeDummyCreditor() {
+		CreditorBank creditor = new CreditorBank();
+		creditor.setRoutingAndTransitNumber("020010001");
+
+		return creditor;
 	}
 
 	public KieContainer getKieContainer() {

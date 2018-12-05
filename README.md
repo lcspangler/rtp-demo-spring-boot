@@ -1,5 +1,19 @@
 # rtp-demo-spring-boot
 
+## Overview
+
+
+
+
+
+## Creditor Use Case
+
+
+
+
+## Debtor Use Case
+
+
 
 
 ## Manual Setup
@@ -137,4 +151,3 @@ oc create configmap rtp-creditor-validation-config \
             --from-literal=SECURITY_PROTOCOL=PLAINTEXT \
             --from-literal=AUTO_OFFSET_RESET=earliest \
             --from-literal=ENABLE_AUTO_COMMIT=true
-
