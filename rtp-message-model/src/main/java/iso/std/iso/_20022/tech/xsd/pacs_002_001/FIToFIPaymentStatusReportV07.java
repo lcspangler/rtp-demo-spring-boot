@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for FIToFIPaymentStatusReportV07 complex type.
+ * <p>
+ * Java class for FIToFIPaymentStatusReportV07 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="FIToFIPaymentStatusReportV07">
@@ -39,132 +41,133 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FIToFIPaymentStatusReportV07", propOrder = {
-    "grpHdr",
-    "orgnlGrpInfAndSts",
-    "txInfAndSts",
-    "splmtryData"
-})
+@XmlType(name = "FIToFIPaymentStatusReportV07", propOrder = { "grpHdr", "orgnlGrpInfAndSts", "txInfAndSts",
+		"splmtryData" })
 public class FIToFIPaymentStatusReportV07 {
 
-    @XmlElement(name = "GrpHdr", required = true)
-    protected GroupHeader53 grpHdr;
-    @XmlElement(name = "OrgnlGrpInfAndSts")
-    protected List<OriginalGroupHeader1> orgnlGrpInfAndSts;
-    @XmlElement(name = "TxInfAndSts")
-    protected List<PaymentTransaction63> txInfAndSts;
-    @XmlElement(name = "SplmtryData")
-    protected List<SupplementaryData1> splmtryData;
+	@XmlElement(name = "GrpHdr", required = true)
+	protected GroupHeader53 grpHdr;
+	@XmlElement(name = "OrgnlGrpInfAndSts")
+	protected List<OriginalGroupHeader1> orgnlGrpInfAndSts;
+	@XmlElement(name = "TxInfAndSts")
+	protected List<PaymentTransaction63> txInfAndSts;
+	@XmlElement(name = "SplmtryData")
+	protected List<SupplementaryData1> splmtryData;
 
-    /**
-     * Gets the value of the grpHdr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GroupHeader53 }
-     *     
-     */
-    public GroupHeader53 getGrpHdr() {
-        return grpHdr;
-    }
+	/**
+	 * Gets the value of the grpHdr property.
+	 * 
+	 * @return possible object is {@link GroupHeader53 }
+	 * 
+	 */
+	public GroupHeader53 getGrpHdr() {
+		return grpHdr;
+	}
 
-    /**
-     * Sets the value of the grpHdr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GroupHeader53 }
-     *     
-     */
-    public void setGrpHdr(GroupHeader53 value) {
-        this.grpHdr = value;
-    }
+	/**
+	 * Sets the value of the grpHdr property.
+	 * 
+	 * @param value allowed object is {@link GroupHeader53 }
+	 * 
+	 */
+	public void setGrpHdr(GroupHeader53 value) {
+		this.grpHdr = value;
+	}
 
-    /**
-     * Gets the value of the orgnlGrpInfAndSts property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the orgnlGrpInfAndSts property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getOrgnlGrpInfAndSts().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link OriginalGroupHeader1 }
-     * 
-     * 
-     */
-    public List<OriginalGroupHeader1> getOrgnlGrpInfAndSts() {
-        if (orgnlGrpInfAndSts == null) {
-            orgnlGrpInfAndSts = new ArrayList<OriginalGroupHeader1>();
-        }
-        return this.orgnlGrpInfAndSts;
-    }
+	/**
+	 * Gets the value of the orgnlGrpInfAndSts property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the orgnlGrpInfAndSts property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getOrgnlGrpInfAndSts().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link OriginalGroupHeader1 }
+	 * 
+	 * 
+	 */
+	public List<OriginalGroupHeader1> getOrgnlGrpInfAndSts() {
+		if (orgnlGrpInfAndSts == null) {
+			orgnlGrpInfAndSts = new ArrayList<OriginalGroupHeader1>();
+		}
+		return this.orgnlGrpInfAndSts;
+	}
 
-    /**
-     * Gets the value of the txInfAndSts property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the txInfAndSts property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getTxInfAndSts().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PaymentTransaction63 }
-     * 
-     * 
-     */
-    public List<PaymentTransaction63> getTxInfAndSts() {
-        if (txInfAndSts == null) {
-            txInfAndSts = new ArrayList<PaymentTransaction63>();
-        }
-        return this.txInfAndSts;
-    }
+	/**
+	 * Gets the value of the txInfAndSts property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the txInfAndSts property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getTxInfAndSts().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link PaymentTransaction63 }
+	 * 
+	 * 
+	 */
+	public List<PaymentTransaction63> getTxInfAndSts() {
+		if (txInfAndSts == null) {
+			txInfAndSts = new ArrayList<PaymentTransaction63>();
+		}
+		return this.txInfAndSts;
+	}
 
-    /**
-     * Gets the value of the splmtryData property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the splmtryData property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSplmtryData().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link SupplementaryData1 }
-     * 
-     * 
-     */
-    public List<SupplementaryData1> getSplmtryData() {
-        if (splmtryData == null) {
-            splmtryData = new ArrayList<SupplementaryData1>();
-        }
-        return this.splmtryData;
-    }
+	/**
+	 * Gets the value of the splmtryData property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the splmtryData property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSplmtryData().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link SupplementaryData1 }
+	 * 
+	 * 
+	 */
+	public List<SupplementaryData1> getSplmtryData() {
+		if (splmtryData == null) {
+			splmtryData = new ArrayList<SupplementaryData1>();
+		}
+		return this.splmtryData;
+	}
+
+	@Override
+	public String toString() {
+		return "FIToFIPaymentStatusReportV07 [grpHdr=" + grpHdr + ", orgnlGrpInfAndSts=" + orgnlGrpInfAndSts
+				+ ", txInfAndSts=" + txInfAndSts + ", splmtryData=" + splmtryData + "]";
+	}
 
 }
