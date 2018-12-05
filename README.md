@@ -5,7 +5,15 @@
 ![business flow](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/rtp_business_flow.png)
 
 
+Source: https://fasterpaymentstaskforce.org/wp-content/uploads/tch-fis-vs.pdf
 
+A real-time payments system is a centralized network connecting Financial Institutions (FIs) to facilitate real-time, account-to-account payments settlement.
+
+
+In November 2017, The Clearing House (TCH) released a Real Time Payments (RTP) network for use within the US. The above diagram summarizes the messaging flow for both Debtor FIs (payment sender banks) and Creditor FIs (payment recipient banks) with the RTP network.
+
+
+This repository contains a reference implementation intended to demonstrate technologies and patterns that can be leveraged by an FI to participate in TCH RTP.
 
 
 ## Debtor/Payer Demo Implementation
@@ -22,11 +30,8 @@
 - Strimzi Kafka cluster
 - Camel component is used to consume and writes from/to Kafka topics.
 - Camel routes are deployed and run as Spring Boot jars
-- Based on spring-boot-camel-archetype Fuse on OpenShift Maven archetype
-⋅⋅ -DarchetypeGroupId=org.jboss.fuse.fis.archetypes
-⋅⋅ -DarchetypeArtifactId=spring-boot-camel-archetype
-⋅⋅ -DarchetypeVersion=2.2.0.fuse-710017-redhat-00003
-- Decision manager rules are run in a stateless session as embedded DRL
+- Based on spring-boot-camel-archetype Fuse on OpenShift Maven archetype ( -DarchetypeGroupId=org.jboss.fuse.fis.archetypes, -DarchetypeArtifactId=spring-boot-camel-archetype, -DarchetypeVersion=2.2.0.fuse-710017-redhat-00003 )
+- Decision manager rules run in a stateless session as embedded DRL
 - Deployed with S2I binary build
 
  **1. Mock RTP route**
