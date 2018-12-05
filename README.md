@@ -10,18 +10,24 @@
 
 ## Debtor/Payer Demo Implementation
 
+![debtor_demo](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/rtp-debtor-demo.png)
 
 
 ## Creditor/Payee Demo Implementation
 
 ![creditor_demo](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/rtp-creditor-demo.png)
 
-Technology summary:
-- Deployed to OpenShift (OKD)
-- Kafka cluster is Strimzi
+**Technology summary:**
+- Deployed to OpenShift (OKD Minishift)
+- Strimzi Kafka cluster
 - Camel component is used to consume and writes from/to Kafka topics.
 - Camel routes are deployed and run as Spring Boot jars
+- Based on spring-boot-camel-archetype Fuse on OpenShift Maven archetype
+-- -DarchetypeGroupId=org.jboss.fuse.fis.archetypes
+-- -DarchetypeArtifactId=spring-boot-camel-archetype
+-- -DarchetypeVersion=2.2.0.fuse-710017-redhat-00003
 - Decision manager rules are run in a stateless session as embedded DRL
+- Deployed with S2I binary build
 
  **1. Mock RTP route**
 - Generates RTP FIToFICustomerCreditTransferV06 messages on a timer
