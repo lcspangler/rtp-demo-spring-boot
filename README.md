@@ -23,9 +23,9 @@
 - Camel component is used to consume and writes from/to Kafka topics.
 - Camel routes are deployed and run as Spring Boot jars
 - Based on spring-boot-camel-archetype Fuse on OpenShift Maven archetype
--- -DarchetypeGroupId=org.jboss.fuse.fis.archetypes
--- -DarchetypeArtifactId=spring-boot-camel-archetype
--- -DarchetypeVersion=2.2.0.fuse-710017-redhat-00003
+⋅⋅ -DarchetypeGroupId=org.jboss.fuse.fis.archetypes
+⋅⋅ -DarchetypeArtifactId=spring-boot-camel-archetype
+⋅⋅ -DarchetypeVersion=2.2.0.fuse-710017-redhat-00003
 - Decision manager rules are run in a stateless session as embedded DRL
 - Deployed with S2I binary build
 
