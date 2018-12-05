@@ -37,8 +37,8 @@ public class CreditorAcknowledgementRouteBuilder extends RouteBuilder {
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
-				+ "&valueDeserializer=rtp.demo.creditor.domain.payments.serde.PaymentsDeserializer")
-						.routeId("FromKafka").log("\n/// Creditor Acknowledegement Route >>> ${body}")
+				+ "&valueDeserializer=rtp.demo.creditor.domain.payments.serde.PaymentDeserializer").routeId("FromKafka")
+						.log("\n/// Creditor Acknowledegement Route >>> ${body}")
 						.bean(MessageStatusReportTransformer.class, "toMessageStatusReport").log(">>> ${body}")
 						.to("kafka:creditor-acks?serializerClass=rtp.message.model.serde.FIToFIPaymentStatusReportV07Serializer");
 	}

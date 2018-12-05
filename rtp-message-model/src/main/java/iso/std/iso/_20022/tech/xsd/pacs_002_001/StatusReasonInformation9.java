@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for StatusReasonInformation9 complex type.
+ * <p>
+ * Java class for StatusReasonInformation9 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="StatusReasonInformation9">
@@ -38,95 +40,88 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StatusReasonInformation9", propOrder = {
-    "orgtr",
-    "rsn",
-    "addtlInf"
-})
+@XmlType(name = "StatusReasonInformation9", propOrder = { "orgtr", "rsn", "addtlInf" })
 public class StatusReasonInformation9 {
 
-    @XmlElement(name = "Orgtr")
-    protected PartyIdentification43 orgtr;
-    @XmlElement(name = "Rsn")
-    protected StatusReason6Choice rsn;
-    @XmlElement(name = "AddtlInf")
-    protected List<String> addtlInf;
+	@XmlElement(name = "Orgtr")
+	protected PartyIdentification43 orgtr;
+	@XmlElement(name = "Rsn")
+	protected StatusReason6Choice rsn;
+	@XmlElement(name = "AddtlInf")
+	protected List<String> addtlInf;
 
-    /**
-     * Gets the value of the orgtr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public PartyIdentification43 getOrgtr() {
-        return orgtr;
-    }
+	/**
+	 * Gets the value of the orgtr property.
+	 * 
+	 * @return possible object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public PartyIdentification43 getOrgtr() {
+		return orgtr;
+	}
 
-    /**
-     * Sets the value of the orgtr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PartyIdentification43 }
-     *     
-     */
-    public void setOrgtr(PartyIdentification43 value) {
-        this.orgtr = value;
-    }
+	/**
+	 * Sets the value of the orgtr property.
+	 * 
+	 * @param value allowed object is {@link PartyIdentification43 }
+	 * 
+	 */
+	public void setOrgtr(PartyIdentification43 value) {
+		this.orgtr = value;
+	}
 
-    /**
-     * Gets the value of the rsn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StatusReason6Choice }
-     *     
-     */
-    public StatusReason6Choice getRsn() {
-        return rsn;
-    }
+	/**
+	 * Gets the value of the rsn property.
+	 * 
+	 * @return possible object is {@link StatusReason6Choice }
+	 * 
+	 */
+	public StatusReason6Choice getRsn() {
+		return rsn;
+	}
 
-    /**
-     * Sets the value of the rsn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StatusReason6Choice }
-     *     
-     */
-    public void setRsn(StatusReason6Choice value) {
-        this.rsn = value;
-    }
+	/**
+	 * Sets the value of the rsn property.
+	 * 
+	 * @param value allowed object is {@link StatusReason6Choice }
+	 * 
+	 */
+	public void setRsn(StatusReason6Choice value) {
+		this.rsn = value;
+	}
 
-    /**
-     * Gets the value of the addtlInf property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addtlInf property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAddtlInf().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getAddtlInf() {
-        if (addtlInf == null) {
-            addtlInf = new ArrayList<String>();
-        }
-        return this.addtlInf;
-    }
+	/**
+	 * Gets the value of the addtlInf property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a snapshot.
+	 * Therefore any modification you make to the returned list will be present
+	 * inside the JAXB object. This is why there is not a <CODE>set</CODE> method
+	 * for the addtlInf property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAddtlInf().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getAddtlInf() {
+		if (addtlInf == null) {
+			addtlInf = new ArrayList<String>();
+		}
+		return this.addtlInf;
+	}
+
+	@Override
+	public String toString() {
+		return "StatusReasonInformation9 [orgtr=" + orgtr + ", rsn=" + rsn + ", addtlInf=" + addtlInf + "]";
+	}
 
 }
