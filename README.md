@@ -1,18 +1,20 @@
 # rtp-demo-spring-boot
 
-## Overview
+## Overview and Business Flow
+
+![business flow](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/rtp_business_flow.png)
 
 
 
 
 
-## Creditor Use Case
+## Debtor/Payer Demo Implementation
 
 
 
+## Creditor/Payee Demo Implementation
 
-## Debtor Use Case
-
+![creditor_demo](https://github.com/lcspangler/rtp-demo-spring-boot/blob/master/images/creditor_demo.png)
 
 
 

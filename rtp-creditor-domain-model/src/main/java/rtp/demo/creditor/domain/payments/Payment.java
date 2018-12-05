@@ -9,7 +9,7 @@ import rtp.demo.creditor.domain.rtp.simplified.CreditTransferMessage;
 public class Payment {
 
 	private CreditTransferMessage creditTransferMessage;
-	private Boolean isValidation = false;
+	private Boolean isValidated = false;
 	private List<PaymentValidationError> errors = new ArrayList<PaymentValidationError>();
 
 	public CreditTransferMessage getCreditTransferMessage() {
@@ -20,12 +20,12 @@ public class Payment {
 		this.creditTransferMessage = creditTransferMessage;
 	}
 
-	public Boolean getIsValidation() {
-		return isValidation;
+	public Boolean getIsValidated() {
+		return isValidated;
 	}
 
-	public void setIsValidation(Boolean isValidation) {
-		this.isValidation = isValidation;
+	public void setIsValidated(Boolean isValidated) {
+		this.isValidated = isValidated;
 	}
 
 	public List<PaymentValidationError> getErrors() {
@@ -42,7 +42,7 @@ public class Payment {
 		int result = 1;
 		result = prime * result + ((creditTransferMessage == null) ? 0 : creditTransferMessage.hashCode());
 		result = prime * result + ((errors == null) ? 0 : errors.hashCode());
-		result = prime * result + ((isValidation == null) ? 0 : isValidation.hashCode());
+		result = prime * result + ((isValidated == null) ? 0 : isValidated.hashCode());
 		return result;
 	}
 
@@ -65,18 +65,18 @@ public class Payment {
 				return false;
 		} else if (!errors.equals(other.errors))
 			return false;
-		if (isValidation == null) {
-			if (other.isValidation != null)
+		if (isValidated == null) {
+			if (other.isValidated != null)
 				return false;
-		} else if (!isValidation.equals(other.isValidation))
+		} else if (!isValidated.equals(other.isValidated))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Payment [creditTransferMessage=" + creditTransferMessage + ", isValidation=" + isValidation
-				+ ", errors=" + errors + "]";
+		return "Payment [creditTransferMessage=" + creditTransferMessage + ", isValidated=" + isValidated + ", errors="
+				+ errors + "]";
 	}
 
 }
