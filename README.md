@@ -21,33 +21,33 @@ Camel consumes and writes from/to Kafka topics.
 Camel routes are deployed and run as Spring Boot jars.
 Decision manager rules are run in a stateless session as embedded DRL.
 
-1. Mock RTP route
+ **1. Mock RTP route**
 - Generates RTP FIToFICustomerCreditTransferV06 messages on a timer
 - Writes to creditor-ctms topic
 
-2. Creditor Intake route
+ **2. Creditor Intake route**
 - Consumes from creditor-ctms
 - Transforms FIToFICustomerCreditTransferV06 to CreditTransferMessage
 - Writes to creditor-pre-validation topic
 
-3. Creditor Validation route
+**3. Creditor Validation route**
 - Consumes from creditor-pre-validation
 - Transforms CreditTransferMessage to PaymentValidationRequest
 - Stateless DRL rules evaluate the PaymentValidationRequest and enrich with errors
 - Transforms PaymentValidationRequest to Payment
 - Writes to creditor-post-validation topic
 
-4-5. Account and Bank data access
+**4-5. Account and Bank data access**
 - In memory dummy data (next iteration JDG lookup) used to feed rules session
 
-6. Auditing service listens to validation results via creditor-post-validation
+**6. Auditing service listens to validation results via creditor-post-validation**
 
-7. Creditor Acknowledgement route
+**7. Creditor Acknowledgement route**
 - Consumes from creditor-post-validation
 - Transforms Payment to FIToFIPaymentStatusReportV07
 - Writes to rtp-creditor-acks topic
 
-8. Mock RTP receives acknowledgement messages
+**8.Mock RTP receives acknowledgement messages** 
 
 
 
