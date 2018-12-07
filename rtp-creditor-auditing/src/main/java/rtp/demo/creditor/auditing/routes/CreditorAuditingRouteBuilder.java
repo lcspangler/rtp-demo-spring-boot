@@ -1,4 +1,4 @@
-package rtp.demo.creditor.intake.routes;
+package rtp.demo.creditor.auditing.routes;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.kafka.KafkaComponent;
@@ -6,41 +6,33 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import rtp.demo.creditor.intake.beans.CreditTransferMessageTransformer;
-
 @Component
-public class CreditorIntakeRouteBuilder extends RouteBuilder {
+public class CreditorAuditingRouteBuilder extends RouteBuilder {
 
-	private static final Logger LOG = LoggerFactory.getLogger(CreditorIntakeRouteBuilder.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CreditorAuditingRouteBuilder.class);
 
-	private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
+	// private String kafkaBootstrap = System.getenv("BOOTSTRAP_SERVERS");
 	// private String kafkaConsumerTopic = System.getenv("CONSUMER_TOPIC");
+	private String kafkaBootstrap = "172.30.27.66:9092";
 
-	private String kafkaConsumerTopic = "creditor-ctms";
-	private String consumerGroup = "rtp-creditor-intake-app";
+	private String kafkaConsumerTopic = "creditor-post-validation";
+	private String consumerGroup = "rtp-creditor-auditing-app";
 	private String consumerMaxPollRecords = "5000";
 	private String consumerCount = "1";
-	private String consumerSeekTo = "beginning";
+	private String consumerSeekTo = "end";
 
 	@Override
 	public void configure() throws Exception {
 		LOG.info("Configuring Creditor Intake Routes");
 
 		KafkaComponent kafka = new KafkaComponent();
-		if (kafkaBootstrap == null) {
-			LOG.info("null boostrap");
-			kafka.setBrokers("172.30.27.66:9092");
-		} else {
-			kafka.setBrokers(kafkaBootstrap);
-		}
+		kafka.setBrokers(kafkaBootstrap);
 		this.getContext().addComponent("kafka", kafka);
 
 		from("kafka:" + kafkaConsumerTopic + "?brokers=" + kafkaBootstrap + "&maxPollRecords=" + consumerMaxPollRecords
 				+ "&consumersCount=" + consumerCount + "&seekTo=" + consumerSeekTo + "&groupId=" + consumerGroup
-				+ "&valueDeserializer=rtp.message.model.serde.FIToFICustomerCreditTransferV06Deserializer")
-						.routeId("FromKafka").log("\n/// Creditor Intake Route >>> ${body}")
-						.bean(CreditTransferMessageTransformer.class, "toCreditTransferMessage").log(">>> ${body}")
-						.to("kafka:creditor-pre-validation?serializerClass=rtp.demo.creditor.domain.rtp.simplified.serde.CreditTransferMessageSerializer");
+				+ "&valueDeserializer=rtp.demo.creditor.domain.payments.serde.PaymentDeserializer").routeId("FromKafka")
+						.log("\n/// Creditor Auditing Route >>> ${body}");
 	}
 
 	public String getKafkaBootstrap() {

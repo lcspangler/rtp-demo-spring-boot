@@ -172,7 +172,7 @@ public class MockRtpRouteBuilder extends RouteBuilder {
 		creditTransferTransaction25.setCdtrAcct(new CashAccount24());
 		creditTransferTransaction25.getCdtrAcct().setId(new AccountIdentification4Choice());
 		creditTransferTransaction25.getCdtrAcct().getId().setOthr(new GenericAccountIdentification1());
-		creditTransferTransaction25.getCdtrAcct().getId().getOthr().setId("12000194212199001");
+		creditTransferTransaction25.getCdtrAcct().getId().getOthr().setId("12000194212199002");
 
 		// Set Debtor Account Number
 		creditTransferTransaction25.setDbtrAcct(new CashAccount24());

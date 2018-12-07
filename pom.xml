@@ -21,6 +21,7 @@
     <module>rtp-creditor-intake</module>
     <module>rtp-creditor-validation</module>
     <module>rtp-creditor-acknowledgement</module>
+    <module>rtp-creditor-auditing</module>
   </modules>
 
   <profiles>
