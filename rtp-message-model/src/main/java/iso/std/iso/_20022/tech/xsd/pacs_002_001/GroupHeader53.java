@@ -49,9 +49,9 @@ public class GroupHeader53 {
 	@XmlSchemaType(name = "dateTime")
 	protected XMLGregorianCalendar creDtTm;
 	@XmlElement(name = "InstgAgt")
-	protected BranchAndFinancialInstitutionIdentification5 instgAgt;
+	protected BranchAndFinancialInstitutionIdentification5 instgAgt = new BranchAndFinancialInstitutionIdentification5();
 	@XmlElement(name = "InstdAgt")
-	protected BranchAndFinancialInstitutionIdentification5 instdAgt;
+	protected BranchAndFinancialInstitutionIdentification5 instdAgt = new BranchAndFinancialInstitutionIdentification5();
 
 	/**
 	 * Gets the value of the msgId property.

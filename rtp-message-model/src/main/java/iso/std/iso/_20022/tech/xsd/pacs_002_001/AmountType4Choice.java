@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for AmountType4Choice complex type.
+ * <p>
+ * Java class for AmountType4Choice complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="AmountType4Choice">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AmountType4Choice", propOrder = {
-    "instdAmt",
-    "eqvtAmt"
-})
+@XmlType(name = "AmountType4Choice", propOrder = { "instdAmt", "eqvtAmt" })
 public class AmountType4Choice {
 
-    @XmlElement(name = "InstdAmt")
-    protected ActiveOrHistoricCurrencyAndAmount instdAmt;
-    @XmlElement(name = "EqvtAmt")
-    protected EquivalentAmount2 eqvtAmt;
+	@XmlElement(name = "InstdAmt")
+	protected ActiveOrHistoricCurrencyAndAmount instdAmt = new ActiveOrHistoricCurrencyAndAmount();
+	@XmlElement(name = "EqvtAmt")
+	protected EquivalentAmount2 eqvtAmt = new EquivalentAmount2();
 
-    /**
-     * Gets the value of the instdAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getInstdAmt() {
-        return instdAmt;
-    }
+	/**
+	 * Gets the value of the instdAmt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getInstdAmt() {
+		return instdAmt;
+	}
 
-    /**
-     * Sets the value of the instdAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setInstdAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.instdAmt = value;
-    }
+	/**
+	 * Sets the value of the instdAmt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setInstdAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.instdAmt = value;
+	}
 
-    /**
-     * Gets the value of the eqvtAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EquivalentAmount2 }
-     *     
-     */
-    public EquivalentAmount2 getEqvtAmt() {
-        return eqvtAmt;
-    }
+	/**
+	 * Gets the value of the eqvtAmt property.
+	 * 
+	 * @return possible object is {@link EquivalentAmount2 }
+	 * 
+	 */
+	public EquivalentAmount2 getEqvtAmt() {
+		return eqvtAmt;
+	}
 
-    /**
-     * Sets the value of the eqvtAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EquivalentAmount2 }
-     *     
-     */
-    public void setEqvtAmt(EquivalentAmount2 value) {
-        this.eqvtAmt = value;
-    }
+	/**
+	 * Sets the value of the eqvtAmt property.
+	 * 
+	 * @param value allowed object is {@link EquivalentAmount2 }
+	 * 
+	 */
+	public void setEqvtAmt(EquivalentAmount2 value) {
+		this.eqvtAmt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "AmountType4Choice [instdAmt=" + instdAmt + ", eqvtAmt=" + eqvtAmt + "]";
+	}
 
 }

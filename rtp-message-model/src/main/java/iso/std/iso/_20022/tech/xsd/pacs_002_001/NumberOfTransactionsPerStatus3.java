@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import java.math.BigDecimal;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for NumberOfTransactionsPerStatus3 complex type.
+ * <p>
+ * Java class for NumberOfTransactionsPerStatus3 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="NumberOfTransactionsPerStatus3">
@@ -38,91 +40,81 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NumberOfTransactionsPerStatus3", propOrder = {
-    "dtldNbOfTxs",
-    "dtldSts",
-    "dtldCtrlSum"
-})
+@XmlType(name = "NumberOfTransactionsPerStatus3", propOrder = { "dtldNbOfTxs", "dtldSts", "dtldCtrlSum" })
 public class NumberOfTransactionsPerStatus3 {
 
-    @XmlElement(name = "DtldNbOfTxs", required = true)
-    protected String dtldNbOfTxs;
-    @XmlElement(name = "DtldSts", required = true)
-    @XmlSchemaType(name = "string")
-    protected TransactionIndividualStatus3Code dtldSts;
-    @XmlElement(name = "DtldCtrlSum")
-    protected BigDecimal dtldCtrlSum;
+	@XmlElement(name = "DtldNbOfTxs", required = true)
+	protected String dtldNbOfTxs;
+	@XmlElement(name = "DtldSts", required = true)
+	@XmlSchemaType(name = "string")
+	protected TransactionIndividualStatus3Code dtldSts;
+	@XmlElement(name = "DtldCtrlSum")
+	protected BigDecimal dtldCtrlSum;
 
-    /**
-     * Gets the value of the dtldNbOfTxs property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDtldNbOfTxs() {
-        return dtldNbOfTxs;
-    }
+	/**
+	 * Gets the value of the dtldNbOfTxs property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDtldNbOfTxs() {
+		return dtldNbOfTxs;
+	}
 
-    /**
-     * Sets the value of the dtldNbOfTxs property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDtldNbOfTxs(String value) {
-        this.dtldNbOfTxs = value;
-    }
+	/**
+	 * Sets the value of the dtldNbOfTxs property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setDtldNbOfTxs(String value) {
+		this.dtldNbOfTxs = value;
+	}
 
-    /**
-     * Gets the value of the dtldSts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TransactionIndividualStatus3Code }
-     *     
-     */
-    public TransactionIndividualStatus3Code getDtldSts() {
-        return dtldSts;
-    }
+	/**
+	 * Gets the value of the dtldSts property.
+	 * 
+	 * @return possible object is {@link TransactionIndividualStatus3Code }
+	 * 
+	 */
+	public TransactionIndividualStatus3Code getDtldSts() {
+		return dtldSts;
+	}
 
-    /**
-     * Sets the value of the dtldSts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TransactionIndividualStatus3Code }
-     *     
-     */
-    public void setDtldSts(TransactionIndividualStatus3Code value) {
-        this.dtldSts = value;
-    }
+	/**
+	 * Sets the value of the dtldSts property.
+	 * 
+	 * @param value allowed object is {@link TransactionIndividualStatus3Code }
+	 * 
+	 */
+	public void setDtldSts(TransactionIndividualStatus3Code value) {
+		this.dtldSts = value;
+	}
 
-    /**
-     * Gets the value of the dtldCtrlSum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getDtldCtrlSum() {
-        return dtldCtrlSum;
-    }
+	/**
+	 * Gets the value of the dtldCtrlSum property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getDtldCtrlSum() {
+		return dtldCtrlSum;
+	}
 
-    /**
-     * Sets the value of the dtldCtrlSum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setDtldCtrlSum(BigDecimal value) {
-        this.dtldCtrlSum = value;
-    }
+	/**
+	 * Sets the value of the dtldCtrlSum property.
+	 * 
+	 * @param value allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setDtldCtrlSum(BigDecimal value) {
+		this.dtldCtrlSum = value;
+	}
+
+	@Override
+	public String toString() {
+		return "NumberOfTransactionsPerStatus3 [dtldNbOfTxs=" + dtldNbOfTxs + ", dtldSts=" + dtldSts + ", dtldCtrlSum="
+				+ dtldCtrlSum + "]";
+	}
 
 }

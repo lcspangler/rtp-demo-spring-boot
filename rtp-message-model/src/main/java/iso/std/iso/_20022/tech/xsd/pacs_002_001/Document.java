@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Document complex type.
+ * <p>
+ * Java class for Document complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Document">
@@ -34,36 +35,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Document", propOrder = {
-    "fiToFIPmtStsRpt"
-})
+@XmlType(name = "Document", propOrder = { "fiToFIPmtStsRpt" })
 public class Document {
 
-    @XmlElement(name = "FIToFIPmtStsRpt", required = true)
-    protected FIToFIPaymentStatusReportV07 fiToFIPmtStsRpt;
+	@XmlElement(name = "FIToFIPmtStsRpt", required = true)
+	protected FIToFIPaymentStatusReportV07 fiToFIPmtStsRpt = new FIToFIPaymentStatusReportV07();
 
-    /**
-     * Gets the value of the fiToFIPmtStsRpt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FIToFIPaymentStatusReportV07 }
-     *     
-     */
-    public FIToFIPaymentStatusReportV07 getFIToFIPmtStsRpt() {
-        return fiToFIPmtStsRpt;
-    }
+	/**
+	 * Gets the value of the fiToFIPmtStsRpt property.
+	 * 
+	 * @return possible object is {@link FIToFIPaymentStatusReportV07 }
+	 * 
+	 */
+	public FIToFIPaymentStatusReportV07 getFIToFIPmtStsRpt() {
+		return fiToFIPmtStsRpt;
+	}
 
-    /**
-     * Sets the value of the fiToFIPmtStsRpt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FIToFIPaymentStatusReportV07 }
-     *     
-     */
-    public void setFIToFIPmtStsRpt(FIToFIPaymentStatusReportV07 value) {
-        this.fiToFIPmtStsRpt = value;
-    }
+	/**
+	 * Sets the value of the fiToFIPmtStsRpt property.
+	 * 
+	 * @param value allowed object is {@link FIToFIPaymentStatusReportV07 }
+	 * 
+	 */
+	public void setFIToFIPmtStsRpt(FIToFIPaymentStatusReportV07 value) {
+		this.fiToFIPmtStsRpt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Document [fiToFIPmtStsRpt=" + fiToFIPmtStsRpt + "]";
+	}
 
 }

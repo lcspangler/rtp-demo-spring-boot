@@ -46,13 +46,13 @@ import javax.xml.bind.annotation.XmlType;
 public class FIToFIPaymentStatusReportV07 {
 
 	@XmlElement(name = "GrpHdr", required = true)
-	protected GroupHeader53 grpHdr;
+	protected GroupHeader53 grpHdr = new GroupHeader53();
 	@XmlElement(name = "OrgnlGrpInfAndSts")
-	protected List<OriginalGroupHeader1> orgnlGrpInfAndSts;
+	protected List<OriginalGroupHeader1> orgnlGrpInfAndSts = new ArrayList<OriginalGroupHeader1>();
 	@XmlElement(name = "TxInfAndSts")
-	protected List<PaymentTransaction63> txInfAndSts;
+	protected List<PaymentTransaction63> txInfAndSts = new ArrayList<PaymentTransaction63>();
 	@XmlElement(name = "SplmtryData")
-	protected List<SupplementaryData1> splmtryData;
+	protected List<SupplementaryData1> splmtryData = new ArrayList<SupplementaryData1>();
 
 	/**
 	 * Gets the value of the grpHdr property.

@@ -40,9 +40,9 @@ import javax.xml.bind.annotation.XmlType;
 public class BranchAndFinancialInstitutionIdentification5 {
 
 	@XmlElement(name = "FinInstnId", required = true)
-	protected FinancialInstitutionIdentification8 finInstnId;
+	protected FinancialInstitutionIdentification8 finInstnId = new FinancialInstitutionIdentification8();
 	@XmlElement(name = "BrnchId")
-	protected BranchData2 brnchId;
+	protected BranchData2 brnchId = new BranchData2();
 
 	/**
 	 * Gets the value of the finInstnId property.

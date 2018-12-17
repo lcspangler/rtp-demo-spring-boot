@@ -45,13 +45,13 @@ public class FinancialInstitutionIdentification8 {
 	@XmlElement(name = "BICFI")
 	protected String bicfi;
 	@XmlElement(name = "ClrSysMmbId")
-	protected ClearingSystemMemberIdentification2 clrSysMmbId;
+	protected ClearingSystemMemberIdentification2 clrSysMmbId = new ClearingSystemMemberIdentification2();
 	@XmlElement(name = "Nm")
 	protected String nm;
 	@XmlElement(name = "PstlAdr")
-	protected PostalAddress6 pstlAdr;
+	protected PostalAddress6 pstlAdr = new PostalAddress6();
 	@XmlElement(name = "Othr")
-	protected GenericFinancialIdentification1 othr;
+	protected GenericFinancialIdentification1 othr = new GenericFinancialIdentification1();
 
 	/**
 	 * Gets the value of the bicfi property.

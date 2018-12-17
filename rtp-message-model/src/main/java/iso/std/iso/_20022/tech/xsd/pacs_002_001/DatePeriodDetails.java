@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for DatePeriodDetails complex type.
+ * <p>
+ * Java class for DatePeriodDetails complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="DatePeriodDetails">
@@ -37,65 +38,59 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DatePeriodDetails", propOrder = {
-    "frDt",
-    "toDt"
-})
+@XmlType(name = "DatePeriodDetails", propOrder = { "frDt", "toDt" })
 public class DatePeriodDetails {
 
-    @XmlElement(name = "FrDt", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar frDt;
-    @XmlElement(name = "ToDt", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar toDt;
+	@XmlElement(name = "FrDt", required = true)
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar frDt;
+	@XmlElement(name = "ToDt", required = true)
+	@XmlSchemaType(name = "date")
+	protected XMLGregorianCalendar toDt;
 
-    /**
-     * Gets the value of the frDt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getFrDt() {
-        return frDt;
-    }
+	/**
+	 * Gets the value of the frDt property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getFrDt() {
+		return frDt;
+	}
 
-    /**
-     * Sets the value of the frDt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setFrDt(XMLGregorianCalendar value) {
-        this.frDt = value;
-    }
+	/**
+	 * Sets the value of the frDt property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setFrDt(XMLGregorianCalendar value) {
+		this.frDt = value;
+	}
 
-    /**
-     * Gets the value of the toDt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getToDt() {
-        return toDt;
-    }
+	/**
+	 * Gets the value of the toDt property.
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public XMLGregorianCalendar getToDt() {
+		return toDt;
+	}
 
-    /**
-     * Sets the value of the toDt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setToDt(XMLGregorianCalendar value) {
-        this.toDt = value;
-    }
+	/**
+	 * Sets the value of the toDt property.
+	 * 
+	 * @param value allowed object is {@link XMLGregorianCalendar }
+	 * 
+	 */
+	public void setToDt(XMLGregorianCalendar value) {
+		this.toDt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "DatePeriodDetails [frDt=" + frDt + ", toDt=" + toDt + "]";
+	}
 
 }

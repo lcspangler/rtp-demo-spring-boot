@@ -67,9 +67,9 @@ public class OriginalGroupHeader1 {
 	@XmlSchemaType(name = "string")
 	protected TransactionGroupStatus3Code grpSts;
 	@XmlElement(name = "StsRsnInf")
-	protected List<StatusReasonInformation9> stsRsnInf;
+	protected List<StatusReasonInformation9> stsRsnInf = new ArrayList<StatusReasonInformation9>();
 	@XmlElement(name = "NbOfTxsPerSts")
-	protected List<NumberOfTransactionsPerStatus3> nbOfTxsPerSts;
+	protected List<NumberOfTransactionsPerStatus3> nbOfTxsPerSts = new ArrayList<NumberOfTransactionsPerStatus3>();
 
 	/**
 	 * Gets the value of the orgnlMsgId property.

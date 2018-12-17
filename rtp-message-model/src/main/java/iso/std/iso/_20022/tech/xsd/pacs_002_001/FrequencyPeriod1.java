@@ -5,21 +5,23 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import java.math.BigDecimal;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for FrequencyPeriod1 complex type.
+ * <p>
+ * Java class for FrequencyPeriod1 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="FrequencyPeriod1">
@@ -37,64 +39,58 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FrequencyPeriod1", propOrder = {
-    "tp",
-    "cntPerPrd"
-})
+@XmlType(name = "FrequencyPeriod1", propOrder = { "tp", "cntPerPrd" })
 public class FrequencyPeriod1 {
 
-    @XmlElement(name = "Tp", required = true)
-    @XmlSchemaType(name = "string")
-    protected Frequency6Code tp;
-    @XmlElement(name = "CntPerPrd", required = true)
-    protected BigDecimal cntPerPrd;
+	@XmlElement(name = "Tp", required = true)
+	@XmlSchemaType(name = "string")
+	protected Frequency6Code tp;
+	@XmlElement(name = "CntPerPrd", required = true)
+	protected BigDecimal cntPerPrd;
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Frequency6Code }
-     *     
-     */
-    public Frequency6Code getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link Frequency6Code }
+	 * 
+	 */
+	public Frequency6Code getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Frequency6Code }
-     *     
-     */
-    public void setTp(Frequency6Code value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link Frequency6Code }
+	 * 
+	 */
+	public void setTp(Frequency6Code value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the cntPerPrd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getCntPerPrd() {
-        return cntPerPrd;
-    }
+	/**
+	 * Gets the value of the cntPerPrd property.
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
+	 */
+	public BigDecimal getCntPerPrd() {
+		return cntPerPrd;
+	}
 
-    /**
-     * Sets the value of the cntPerPrd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setCntPerPrd(BigDecimal value) {
-        this.cntPerPrd = value;
-    }
+	/**
+	 * Sets the value of the cntPerPrd property.
+	 * 
+	 * @param value allowed object is {@link BigDecimal }
+	 * 
+	 */
+	public void setCntPerPrd(BigDecimal value) {
+		this.cntPerPrd = value;
+	}
+
+	@Override
+	public String toString() {
+		return "FrequencyPeriod1 [tp=" + tp + ", cntPerPrd=" + cntPerPrd + "]";
+	}
 
 }

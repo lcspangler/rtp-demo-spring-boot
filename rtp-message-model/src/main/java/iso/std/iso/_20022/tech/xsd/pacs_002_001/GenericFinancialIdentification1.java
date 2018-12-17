@@ -43,7 +43,7 @@ public class GenericFinancialIdentification1 {
 	@XmlElement(name = "Id", required = true)
 	protected String id;
 	@XmlElement(name = "SchmeNm")
-	protected FinancialIdentificationSchemeName1Choice schmeNm;
+	protected FinancialIdentificationSchemeName1Choice schmeNm = new FinancialIdentificationSchemeName1Choice();
 	@XmlElement(name = "Issr")
 	protected String issr;
 

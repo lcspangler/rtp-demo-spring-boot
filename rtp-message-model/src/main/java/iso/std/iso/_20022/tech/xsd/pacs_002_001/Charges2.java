@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Charges2 complex type.
+ * <p>
+ * Java class for Charges2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Charges2">
@@ -35,63 +36,59 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Charges2", propOrder = {
-    "amt",
-    "agt"
-})
+@XmlType(name = "Charges2", propOrder = { "amt", "agt" })
 public class Charges2 {
 
-    @XmlElement(name = "Amt", required = true)
-    protected ActiveOrHistoricCurrencyAndAmount amt;
-    @XmlElement(name = "Agt", required = true)
-    protected BranchAndFinancialInstitutionIdentification5 agt;
+	@XmlElement(name = "Amt", required = true)
+	protected ActiveOrHistoricCurrencyAndAmount amt = new ActiveOrHistoricCurrencyAndAmount();
+	@XmlElement(name = "Agt", required = true)
+	protected BranchAndFinancialInstitutionIdentification5 agt = new BranchAndFinancialInstitutionIdentification5();
 
-    /**
-     * Gets the value of the amt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public ActiveOrHistoricCurrencyAndAmount getAmt() {
-        return amt;
-    }
+	/**
+	 * Gets the value of the amt property.
+	 * 
+	 * @return possible object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public ActiveOrHistoricCurrencyAndAmount getAmt() {
+		return amt;
+	}
 
-    /**
-     * Sets the value of the amt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActiveOrHistoricCurrencyAndAmount }
-     *     
-     */
-    public void setAmt(ActiveOrHistoricCurrencyAndAmount value) {
-        this.amt = value;
-    }
+	/**
+	 * Sets the value of the amt property.
+	 * 
+	 * @param value allowed object is {@link ActiveOrHistoricCurrencyAndAmount }
+	 * 
+	 */
+	public void setAmt(ActiveOrHistoricCurrencyAndAmount value) {
+		this.amt = value;
+	}
 
-    /**
-     * Gets the value of the agt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BranchAndFinancialInstitutionIdentification5 }
-     *     
-     */
-    public BranchAndFinancialInstitutionIdentification5 getAgt() {
-        return agt;
-    }
+	/**
+	 * Gets the value of the agt property.
+	 * 
+	 * @return possible object is
+	 *         {@link BranchAndFinancialInstitutionIdentification5 }
+	 * 
+	 */
+	public BranchAndFinancialInstitutionIdentification5 getAgt() {
+		return agt;
+	}
 
-    /**
-     * Sets the value of the agt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BranchAndFinancialInstitutionIdentification5 }
-     *     
-     */
-    public void setAgt(BranchAndFinancialInstitutionIdentification5 value) {
-        this.agt = value;
-    }
+	/**
+	 * Sets the value of the agt property.
+	 * 
+	 * @param value allowed object is
+	 *              {@link BranchAndFinancialInstitutionIdentification5 }
+	 * 
+	 */
+	public void setAgt(BranchAndFinancialInstitutionIdentification5 value) {
+		this.agt = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Charges2 [amt=" + amt + ", agt=" + agt + "]";
+	}
 
 }

@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for CreditorReferenceInformation2 complex type.
+ * <p>
+ * Java class for CreditorReferenceInformation2 complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="CreditorReferenceInformation2">
@@ -35,63 +36,57 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CreditorReferenceInformation2", propOrder = {
-    "tp",
-    "ref"
-})
+@XmlType(name = "CreditorReferenceInformation2", propOrder = { "tp", "ref" })
 public class CreditorReferenceInformation2 {
 
-    @XmlElement(name = "Tp")
-    protected CreditorReferenceType2 tp;
-    @XmlElement(name = "Ref")
-    protected String ref;
+	@XmlElement(name = "Tp")
+	protected CreditorReferenceType2 tp = new CreditorReferenceType2();
+	@XmlElement(name = "Ref")
+	protected String ref;
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CreditorReferenceType2 }
-     *     
-     */
-    public CreditorReferenceType2 getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link CreditorReferenceType2 }
+	 * 
+	 */
+	public CreditorReferenceType2 getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CreditorReferenceType2 }
-     *     
-     */
-    public void setTp(CreditorReferenceType2 value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link CreditorReferenceType2 }
+	 * 
+	 */
+	public void setTp(CreditorReferenceType2 value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the ref property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRef() {
-        return ref;
-    }
+	/**
+	 * Gets the value of the ref property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getRef() {
+		return ref;
+	}
 
-    /**
-     * Sets the value of the ref property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRef(String value) {
-        this.ref = value;
-    }
+	/**
+	 * Sets the value of the ref property.
+	 * 
+	 * @param value allowed object is {@link String }
+	 * 
+	 */
+	public void setRef(String value) {
+		this.ref = value;
+	}
+
+	@Override
+	public String toString() {
+		return "CreditorReferenceInformation2 [tp=" + tp + ", ref=" + ref + "]";
+	}
 
 }

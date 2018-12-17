@@ -5,7 +5,6 @@
 // Generated on: 2018.11.07 at 12:45:54 PM EST 
 //
 
-
 package iso.std.iso._20022.tech.xsd.pacs_002_001;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Frequency21Choice complex type.
+ * <p>
+ * Java class for Frequency21Choice complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Frequency21Choice">
@@ -36,64 +37,58 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Frequency21Choice", propOrder = {
-    "tp",
-    "prd"
-})
+@XmlType(name = "Frequency21Choice", propOrder = { "tp", "prd" })
 public class Frequency21Choice {
 
-    @XmlElement(name = "Tp")
-    @XmlSchemaType(name = "string")
-    protected Frequency6Code tp;
-    @XmlElement(name = "Prd")
-    protected FrequencyPeriod1 prd;
+	@XmlElement(name = "Tp")
+	@XmlSchemaType(name = "string")
+	protected Frequency6Code tp;
+	@XmlElement(name = "Prd")
+	protected FrequencyPeriod1 prd = new FrequencyPeriod1();
 
-    /**
-     * Gets the value of the tp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Frequency6Code }
-     *     
-     */
-    public Frequency6Code getTp() {
-        return tp;
-    }
+	/**
+	 * Gets the value of the tp property.
+	 * 
+	 * @return possible object is {@link Frequency6Code }
+	 * 
+	 */
+	public Frequency6Code getTp() {
+		return tp;
+	}
 
-    /**
-     * Sets the value of the tp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Frequency6Code }
-     *     
-     */
-    public void setTp(Frequency6Code value) {
-        this.tp = value;
-    }
+	/**
+	 * Sets the value of the tp property.
+	 * 
+	 * @param value allowed object is {@link Frequency6Code }
+	 * 
+	 */
+	public void setTp(Frequency6Code value) {
+		this.tp = value;
+	}
 
-    /**
-     * Gets the value of the prd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FrequencyPeriod1 }
-     *     
-     */
-    public FrequencyPeriod1 getPrd() {
-        return prd;
-    }
+	/**
+	 * Gets the value of the prd property.
+	 * 
+	 * @return possible object is {@link FrequencyPeriod1 }
+	 * 
+	 */
+	public FrequencyPeriod1 getPrd() {
+		return prd;
+	}
 
-    /**
-     * Sets the value of the prd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FrequencyPeriod1 }
-     *     
-     */
-    public void setPrd(FrequencyPeriod1 value) {
-        this.prd = value;
-    }
+	/**
+	 * Sets the value of the prd property.
+	 * 
+	 * @param value allowed object is {@link FrequencyPeriod1 }
+	 * 
+	 */
+	public void setPrd(FrequencyPeriod1 value) {
+		this.prd = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Frequency21Choice [tp=" + tp + ", prd=" + prd + "]";
+	}
 
 }
