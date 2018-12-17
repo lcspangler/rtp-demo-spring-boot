@@ -1,9 +1,17 @@
 package rtp.demo.creditor.domain.account;
 
+import java.io.Serializable;
+
+import org.infinispan.protostream.annotations.ProtoDoc;
+import org.infinispan.protostream.annotations.ProtoField;
+
 /*
  * Simple domain class representing an account held by the Creditor
  */
-public class Account {
+@ProtoDoc("@Indexed")
+public class Account implements Serializable {
+
+	private static final long serialVersionUID = -9131494827098991910L;
 
 	private String accountNumber;
 
@@ -13,6 +21,7 @@ public class Account {
 
 	private Customer customer = new Customer();
 
+	@ProtoField(number = 1, required = true)
 	public String getAccountNumber() {
 		return accountNumber;
 	}
@@ -21,6 +30,7 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 
+	@ProtoField(number = 2, required = false)
 	public String getAccountType() {
 		return accountType;
 	}
@@ -29,6 +39,7 @@ public class Account {
 		this.accountType = accountType;
 	}
 
+	@ProtoField(number = 3, required = false)
 	public AccountStatus getStatus() {
 		return status;
 	}
@@ -37,6 +48,7 @@ public class Account {
 		this.status = status;
 	}
 
+	@ProtoField(number = 4, required = false)
 	public Customer getCustomer() {
 		return customer;
 	}

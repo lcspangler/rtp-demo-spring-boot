@@ -1,14 +1,23 @@
 package rtp.demo.creditor.domain.account;
 
+import java.io.Serializable;
+
+import org.infinispan.protostream.annotations.ProtoDoc;
+import org.infinispan.protostream.annotations.ProtoField;
+
 /*
  * Simple domain class representing an account holder
  */
-public class Customer {
+@ProtoDoc("@Indexed")
+public class Customer implements Serializable {
+
+	private static final long serialVersionUID = -5595393668076897360L;
 
 	private String firstName;
 
 	private String lastName;
 
+	@ProtoField(number = 1, required = false)
 	public String getFirstName() {
 		return firstName;
 	}
@@ -17,6 +26,7 @@ public class Customer {
 		this.firstName = firstName;
 	}
 
+	@ProtoField(number = 2, required = false)
 	public String getLastName() {
 		return lastName;
 	}

@@ -1,8 +1,15 @@
 package rtp.demo.creditor.domain.account;
 
+import org.infinispan.protostream.annotations.ProtoEnum;
+import org.infinispan.protostream.annotations.ProtoEnumValue;
+
+@ProtoEnum(name = "AccountStatus")
 public enum AccountStatus {
 
-	OPEN("OPEN"), CLOSED("CLOSED"), BLOCKED("BLOCKED");
+	@ProtoEnumValue(number = 1, name = "OPEN")
+	OPEN("OPEN"), @ProtoEnumValue(number = 2, name = "CLOSED")
+	CLOSED("CLOSED"), @ProtoEnumValue(number = 3, name = "BLOCKED")
+	BLOCKED("BLOCKED");
 
 	private final String status;
 

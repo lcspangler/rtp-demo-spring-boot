@@ -16,10 +16,8 @@
     <module>rtp-message-model</module>
     <module>rtp-creditor-domain-model</module>
     <module>rtp-creditor-validation-model</module>
-    <module>rtp-creditor-validation-rules</module>
     <module>rtp-mock</module>
-    <module>rtp-creditor-intake</module>
-    <module>rtp-creditor-validation</module>
+    <module>rtp-creditor-intake-validation</module>
     <module>rtp-creditor-acknowledgement</module>
     <module>rtp-creditor-auditing</module>
   </modules>
