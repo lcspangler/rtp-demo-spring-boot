@@ -1,0 +1,154 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+} 
+
+.toolbar.wallet-toolbar {
+    background: #EE350F;
+    color: white;
+}
+
+.toolbar.wallet-toolbar a.link {
+    color: inherit;
+}
+
+.md .payment-form-wrap form {
+    border: 1px solid #f7f7f7;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.payment-form-wrap .list input[type=text] {
+    color: #F44336;
+}
+
+.wallet-navbar .toolbar .tab-link i {
+    font-size: 25px;
+}
+
+p.helper-text {
+    font-size: 13px;
+    color: #9E9E9E;
+    margin-left: 15px;
+}
+
+.popup-acknowledge .icon-wrap {
+    font-size: 41px;
+    text-align: center;
+    /* border: 10px solid red; */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #4CAF50;
+    color: white;
+    line-height: 100px;
+    margin: 20% auto 0px auto;
+}
+
+.popup-acknowledge .icon-wrap i.fas {
+    font-size: inherit;
+}
+
+.popup.popup-acknowledge {
+    text-align: center;
+}
+
+p.modal-txt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20%;
+}
+
+.ack-date {
+    float: right;
+    color: #ababab;
+}
+
+.ack-details {
+    text-align: left;
+}
+
+.ack-amount {
+    font-size: 50px;
+    font-weight: bold;
+    color: #F44336;
+    padding: 20px 0px;
+    border: 1px dashed #e8e8e8;
+    background: white;
+    width: auto;
+    margin: 5px 0px 5px 0px;
+}
+
+.ack-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ack-account {
+    color: #ababab;
+}
+
+p.ack-continue {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    bottom: 10px;
+}
+
+.popup.popup-acknowledge {
+    background: #f9f9f9;
+}
+
+.stat-status div {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background: red;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+    background: #4CAF50;
+    color: #FFF;
+}
+
+.item-title.stat-title {
+    color: #6b6b6b;
+    font-weight: bold;
+}
+
+.item-subtitle.stat-transaction {
+    color: #adadad;
+}
+
+.stat-amount {
+    color: #292929 !important;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.orderdetail {
+    font-size: 12px;
+    color: #ada1a1;
+}
+
+.tran-PENDING .stat-status div {
+    background: #FFC107;
+}
+
+.tran-REJECTED .stat-status div {
+    background: #f54c3d;
+}
+
+.transhistory .item-after {
+    padding-right: 10px !important;
+}
+
+.md .navbar-inner {
+    background: #c33729;
+}
