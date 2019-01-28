@@ -41,10 +41,10 @@ class Payment {
     getProfile() {
         return {
             id: this.accountId,
-            firstName: 'Alex',
-            lastName: 'Man',
+            firstName: 'Liz',
+            lastName: 'Spangler',
             balance: '200',
-            email: 'alex.man@web2friends.com'
+            email: 'liz@gmail.com'
         }
     }
 }
