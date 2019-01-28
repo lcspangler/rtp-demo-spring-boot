@@ -24,6 +24,8 @@ $(document).ready(function(e) {
         console.log(page);
         if(page == "transaction") {
             showTransaction();
+        } else if (page == "account") {
+            showAccount();
         }
     });
 });
@@ -67,13 +69,13 @@ function getTransationRow(item) {
 
 function sendPayment() {
     var data = {
-        "debtorAccountNumber": $(".page-current .s-account").val(),
+        "debtorAccountNumber": paymentApp.getAccountId(),
         "amount": $(".page-current .s-amount").val(),
         "receiverFirstName": $(".page-current .s-first-name").val(),
-        "receiverLastName": $(".page-current .s-last-name").val(),
-        // "receiverEmail": $(".page-current .s-email").val(),
-        // "receiverCellPhone": $(".page-current .s-phone").val()
+        "receiverLastName": $(".page-current .s-last-name").val()
     }
+    var emailPhone = $(".page-current .s-phoneemail").val();
+
     for(var key in data) {
         if(data[key] == "") {
             showToast("Please fill all fields.");
@@ -81,10 +83,19 @@ function sendPayment() {
         }
     }
 
-    // if(!validateEmail(data.receiverEmail)) {
-    //     showToast("Please insert valid email.");
-    //     return false;
-    // }
+    if(emailPhone == "") {
+        showToast("Please fill all fields.");
+        return false;
+    }
+
+    if(validateEmail(emailPhone)) {
+        //data.receiverEmail = emailPhone;
+    } else if (!isNaN(emailPhone)) {
+        //data.receiverCellPhone = emailPhone;
+    } else {
+        showToast("Please enter either valid email address or 10 digit mobile number.");
+        return false;
+    }
 
     app.preloader.show();
     var params = {
@@ -136,4 +147,32 @@ function validateEmail (elementValue) {
     var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     var status = (elementValue.search(emailRegEx) == -1) ? false : true;
     return status;
+}
+
+function login() {
+    var data = {
+        accountId: $(".page-current .login-accountId").val(),
+        password: $(".page-current .login-password").val()
+    }
+    for(var key in data) {
+        if(data[key] == "") {
+            showToast("Please fill all fields.");
+            return false;
+        }
+    }
+
+    paymentApp.setAccountId(data.accountId);
+    app.router.navigate("/send/");
+}
+
+function logout() {
+    app.router.navigate("/");
+}
+
+function showAccount() {
+    var profile = paymentApp.getProfile();
+    $(".account-id").html(profile.accountId);
+    $(".account-email").html(profile.email);
+    $(".account-name").html(profile.name);
+    $(".account-hero-info").html(profile.balance);
 }

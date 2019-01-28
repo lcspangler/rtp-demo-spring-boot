@@ -29,4 +29,22 @@ class Payment {
             
         });
     }
+
+    setAccountId(id) {
+        this.accountId = id;
+    }
+
+    getAccountId(id) {
+        return this.accountId;
+    }
+
+    getProfile() {
+        return {
+            id: this.accountId,
+            firstName: 'Alex',
+            lastName: 'Man',
+            balance: '200',
+            email: 'alex.man@web2friends.com'
+        }
+    }
 }

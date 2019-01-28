@@ -6,13 +6,18 @@ var routes = [
         name: 'index'
     }, 
     {
-        path: '/receive/',
-        url: 'receive.html',
-        name: 'receive'
+        path: '/send/',
+        url: 'send.html',
+        name: 'send'
     }, 
     {
         path: '/transaction/',
         url: 'transaction.html',
         name: 'transaction'
+    }, 
+    {
+        path: '/account/',
+        url: 'account.html',
+        name: 'account'
     }
 ];
